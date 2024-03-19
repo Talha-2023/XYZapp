@@ -1,10 +1,13 @@
 import "./App.css";
+import BackGround from "./Components/BackGround/BackGround";
+import TopLogo from "./Components/Header/TopLogo";
 
 function App() {
   return (
-    <>
-      <h1>Hello</h1>
-    </>
+    <div className="MAIN">
+      <BackGround></BackGround>
+      <TopLogo />
+    </div>
   );
 }
 

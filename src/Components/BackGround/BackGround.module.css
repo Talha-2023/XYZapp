@@ -1,0 +1,29 @@
+.MainBgCont {
+  background: linear-gradient(#07143f, #07143f, #34073f);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -999;
+  display: flex;
+  justify-content: center;
+}
+.Group_MainBgCont {
+  width: 1440px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+}
+.Part1_GP_Main {
+  border-right: 1px solid #ffffff10;
+  border-left: 1px solid #ffffff10;
+  width: 25%;
+  display: block;
+}
+.Part2_GP_Main {
+  border-right: 1px solid #ffffff10;
+  width: 25%;
+  display: block;
+}
