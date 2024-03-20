@@ -1,0 +1,27 @@
+.line_container {
+  width: 30%;
+  margin-left: 10%;
+  padding: 5% 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.orange {
+  width: 50%;
+  border-top: 2px solid #fab440;
+}
+.purple {
+  width: 30%;
+  border-top: 2px solid #433cae;
+}
+.aqua {
+  width: 20%;
+  border-top: 2px solid#128899;
+}
+
+@media screen and (max-width: 500px) {
+  .line_container {
+    width: 50%;
+  }
+}
