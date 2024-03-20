@@ -1,11 +1,11 @@
 import styles from "./TopContainer.module.css";
-import { ImAccessibility } from "react-icons/im";
-import { ImAddressBook } from "react-icons/im";
-import { ImAirplane } from "react-icons/im";
-import { ImAlarm } from "react-icons/im";
-import { ImBlogger } from "react-icons/im";
-import { ImBook } from "react-icons/im";
-import { ImBullhorn } from "react-icons/im";
+import { GrAction } from "react-icons/gr";
+import { GrAchievement } from "react-icons/gr";
+import { GrActions } from "react-icons/gr";
+import { GrAd } from "react-icons/gr";
+import { GrBar } from "react-icons/gr";
+import { GrCalculator } from "react-icons/gr";
+import { GrCatalog } from "react-icons/gr";
 
 const TopContainer = () => {
   return (
@@ -19,25 +19,25 @@ const TopContainer = () => {
         </div>
         <div className={styles.icon_container}>
           <div className={styles.icon}>
-            <ImAccessibility />
+            <GrAction />
           </div>
           <div className={styles.icon}>
-            <ImAddressBook />
+            <GrAchievement />
           </div>
           <div className={styles.icon}>
-            <ImAirplane />
+            <GrActions />
           </div>
           <div className={styles.icon}>
-            <ImAlarm />
+            <GrAd />
           </div>
           <div className={styles.icon}>
-            <ImBlogger />
+            <GrBar />
           </div>
           <div className={styles.icon}>
-            <ImBook />
+            <GrCalculator />
           </div>
           <div className={styles.icon}>
-            <ImBullhorn />
+            <GrCatalog />
           </div>
         </div>
       </div>

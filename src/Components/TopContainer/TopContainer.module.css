@@ -3,7 +3,7 @@
   min-width: 250px;
   margin-left: 10%;
   margin-right: 20px;
-  margin-top: 5%;
+  margin-top: 95px;
 }
 .creator_container {
   width: 100%;
@@ -26,7 +26,8 @@
   -webkit-text-stroke: 2px orange;
 }
 .bottom_container {
-  margin-top: 8px;
+  margin-top: 14px;
+  margin-left: 1%;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -35,9 +36,9 @@
   width: fit-content;
 }
 .para_container p {
-  font-size: clamp(14px, 2.5vw, 20px);
-  font-family: "Meera Inimai", sans-serif;
-  color: rgba(255, 255, 255, 0.661);
+  font-size: clamp(14px, 2.5vw, 18px);
+  font-family: "Metrophobic", sans-serif;
+  color: white;
 }
 .icon_container {
   display: flex;
@@ -48,12 +49,12 @@
   margin-left: 1%;
 }
 .icon_container .icon {
-  color: rgba(255, 255, 255, 0.661);
+  color: white;
 
-  font-size: 20px;
+  font-size: 18px;
   margin-left: 8px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .creator_container p {
     -webkit-text-stroke: 1px white;
   }
