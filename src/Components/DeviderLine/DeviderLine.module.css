@@ -1,7 +1,7 @@
 .line_container {
   width: 40%;
-  margin-left: 10%;
-  padding: 6% 0px;
+  margin-left: 7%;
+  padding: 7% 0px 10% 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,6 +23,6 @@
 @media screen and (max-width: 800px) {
   .line_container {
     width: 60%;
-    padding: 10% 0px;
+    padding: 10% 0px 15% 0px;
   }
 }
