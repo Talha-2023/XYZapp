@@ -1,8 +1,8 @@
 import "./App.css";
 import BackGround from "./Components/BackGround/BackGround";
-import AppContainer from "./Components/Common/AppContainer/AppContainer";
+import AppContainer from "./Components/Apps/AppContainer/AppContainer";
 import DeviderLine from "./Components/DeviderLine/DeviderLine";
-import TopLogo from "./Components/Header/TopLogo";
+import Navbar from "./Components/Navbar/Navbar";
 import TopContainer from "./Components/TopContainer/TopContainer";
 
 function App() {
@@ -10,10 +10,12 @@ function App() {
     <>
       <BackGround></BackGround>
 
-      <TopLogo />
+      <Navbar />
 
       <div className="MAIN">
         <TopContainer />
+        <DeviderLine />
+        <AppContainer />
         <DeviderLine />
         <AppContainer />
       </div>

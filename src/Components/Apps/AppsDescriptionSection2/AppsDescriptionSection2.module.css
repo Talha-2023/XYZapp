@@ -1,0 +1,74 @@
+.app_discription {
+  width: 380px;
+  height: 597px;
+  border: 2px solid red;
+  margin-left: 15px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.app_discription img {
+  width: 240px;
+  height: 360px;
+  border-radius: 100px;
+  /* filter: brightness(50%); */
+  box-shadow: 0px 0px 50px 0px #07143f76;
+  opacity: 70%;
+  border: 2px solid white;
+}
+
+.img_container {
+  position: relative;
+  display: inline-block;
+}
+.gif_shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px 0px 100px 20px #07143f;
+  border-radius: 100px;
+}
+.discription {
+  width: 80%;
+}
+.discription .dis {
+  color: white;
+  /* font-family: "Monomaniac One", sans-serif; */
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  font-size: clamp(10px, 1.6vw, 16px);
+  position: absolute;
+  width: 70%;
+  top: 300px;
+  right: 30px;
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+.colen {
+  color: #fab440;
+  font-family: "Yusei Magic", sans-serif;
+  position: absolute;
+  transform: rotate(180deg);
+  font-size: 180px;
+  top: 100px;
+  left: -20px;
+}
+
+.pattern {
+  font-family: "Yusei Magic", sans-serif;
+  color: rgb(255, 255, 255);
+  line-height: 40px;
+  letter-spacing: 10px;
+  top: 0;
+  right: 0;
+  filter: opacity(50%);
+  position: absolute;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 800px) {
+  .app_discription {
+    display: none;
+  }
+}

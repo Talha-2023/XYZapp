@@ -10,11 +10,12 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #a19bff;
-  background: linear-gradient(#642bff, #8a027a);
+  background: linear-gradient(#07143f, #07143f, #34073f);
+  /* background: linear-gradient(#642bff, #8a027a); */
 }
 ::-webkit-scrollbar-thumb {
   background: #ffffff;
-
+  box-shadow: inset 0px 20px 8px 0px rgb(16, 197, 225),
+    inset 0px -20px 8px 0px rgb(16, 197, 225);
   border-radius: 10px;
 }
