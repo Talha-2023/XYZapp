@@ -1,0 +1,97 @@
+.know_me {
+  font-size: 15px;
+  position: relative;
+  top: -14px;
+  font-family: "Metrophobic", sans-serif;
+  font-weight: 900;
+  padding: 5px;
+  border-radius: 10px;
+  background: #fab440;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  cursor: pointer;
+
+  /* display: block; */
+}
+.know_me_description {
+  max-width: 270px;
+  height: auto;
+  top: 30px;
+  right: 20px;
+  border-radius: 30px;
+  background: white;
+  position: absolute;
+  border: 2px solid black;
+  box-shadow: 5px 10px 0px 0px #fab440;
+  padding: 40px 20px 20px 20px;
+  margin: 0px 10px;
+  display: none;
+}
+.know_me_description p {
+  color: black;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+}
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+}
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+
+  background-color: white;
+  position: absolute;
+  top: -11.5px;
+  right: 40px;
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 800px) {
+  .know_me {
+    display: block;
+  }
+  .know_me_description {
+    display: block;
+  }
+}
+@media screen and (max-width: 435px) {
+  .know_me {
+    font-size: 10px;
+    top: -10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .know_me {
+    font-size: 9px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .know_me_description p {
+    font-size: 14px;
+  }
+  .know_me_description {
+    top: 50px;
+  }
+  .arrow {
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+
+    background-color: white;
+    position: absolute;
+    top: -11.5px;
+    right: 20px;
+    transform: rotate(50deg);
+  }
+}

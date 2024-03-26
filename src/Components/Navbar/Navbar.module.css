@@ -10,8 +10,8 @@ nav {
   align-items: center;
 
   margin: auto;
-  background-color: black;
-  box-shadow: 0px 0px 50px 30px rgb(0, 0, 0);
+  background-color: #16274d;
+  box-shadow: 0px 0px 100px 100px #16274d;
 }
 nav .logo_cont {
   margin-top: 20px;

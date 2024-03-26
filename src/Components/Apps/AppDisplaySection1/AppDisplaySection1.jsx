@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./AppDisplaySection1.module.css";
-import { TbClick } from "react-icons/tb";
+
 import AppCard from "../AppCard/AppCard";
+import AppDisplayPhone from "./AppDisplayPhone/AppDisplayPhone";
 
 const AppDisplaySection1 = () => {
   return (
@@ -13,9 +14,7 @@ const AppDisplaySection1 = () => {
           <div className={styles.purple_dot}></div>
           <div className={styles.aqua_dot}></div>
         </div>
-        <div className={styles.know_me}>
-          Know Me &nbsp; <TbClick />
-        </div>
+        <AppDisplayPhone />
       </div>
       <div className={styles.apps_cards}>
         <AppCard />

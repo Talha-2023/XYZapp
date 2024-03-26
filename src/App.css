@@ -19,3 +19,6 @@ body {
     inset 0px -20px 8px 0px rgb(16, 197, 225);
   border-radius: 10px;
 }
+::selection {
+  background: rgb(0, 208, 255);
+}

@@ -17,13 +17,13 @@
   padding: 8px;
 }
 .Part1_GP_Main {
-  border-right: 1px solid #ffffff10;
-  border-left: 1px solid #ffffff10;
+  border-right: 2px solid #ffffff10;
+  border-left: 2px solid #ffffff10;
   width: 25%;
   display: block;
 }
 .Part2_GP_Main {
-  border-right: 1px solid #ffffff10;
+  border-right: 2px solid #ffffff10;
   width: 25%;
   display: block;
 }
