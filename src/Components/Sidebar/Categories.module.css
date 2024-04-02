@@ -1,0 +1,15 @@
+.Sidebar_Cat {
+  font-size: 20px;
+  font-family: "Lilita One", sans-serif;
+  width: 170px;
+  background-color: aliceblue;
+
+  /* box-shadow: 3px 3px 0px 0px #128899; */
+  border-radius: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 12px;
+  margin-top: 25px;
+  font-size: 16px;
+}

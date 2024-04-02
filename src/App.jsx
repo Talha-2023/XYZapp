@@ -4,6 +4,7 @@ import AppContainer from "./Components/Apps/AppContainer/AppContainer";
 import DeviderLine from "./Components/DeviderLine/DeviderLine";
 import Navbar from "./Components/Navbar/Navbar";
 import TopContainer from "./Components/TopContainer/TopContainer";
+import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <AppContainer />
         <DeviderLine />
         <AppContainer />
+        {/* <Sidebar /> */}
       </div>
     </>
   );
