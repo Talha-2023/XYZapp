@@ -2,14 +2,12 @@ import React from "react";
 import styles from "./AppCard.module.css";
 import { PiCalculatorLight } from "react-icons/pi";
 
-const AppCard = () => {
+const AppCard = ({ appicon, appname }) => {
   return (
     <div className={styles.app}>
-      <div className={styles.icon}>
-        <PiCalculatorLight />
-      </div>
+      <div className={styles.icon}>{appicon}</div>
 
-      <p>BMI Calculator</p>
+      <p>{appname}</p>
     </div>
   );
 };

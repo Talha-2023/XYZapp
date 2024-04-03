@@ -4,7 +4,7 @@ import { FaVolumeHigh } from "react-icons/fa6";
 import { IoCloseCircle } from "react-icons/io5";
 
 import { useState } from "react";
-const AppDisplayPhone = () => {
+const AppDisplayPhone = ({ discription }) => {
   const [display, setDisplay] = useState(false);
 
   const HandleDisplay = () => {
@@ -22,13 +22,8 @@ const AppDisplayPhone = () => {
           <div className={styles.know_me_description}>
             <p>
               <FaVolumeHigh style={{ color: "orange", fontSize: "20px" }} />
-              &nbsp;Easily monitor your health with our web apps! Use the BMI
-              Calculator to check your weight status, estimate calorie burn with
-              the Caloric Burn Calculator, find nutritional content with the
-              Nutritional Value Calculator, assess body fat percentage with the
-              Body Fat Percentage Calculator, and track water intake with the
-              Water Intake Checker. Stay informed and make healthier choices
-              effortlessly!
+              {discription}
+              {console.log(discription)}
             </p>
             <div className={styles.arrow}></div>
             <div className={styles.closeButton} onClick={HandleDisplay}>

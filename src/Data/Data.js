@@ -4,7 +4,7 @@ import { AiOutlineFire } from "react-icons/ai";
 import { IoBodyOutline } from "react-icons/io5";
 import { CiGlass } from "react-icons/ci";
 
-export const DATA = [
+export const Data = [
   {
     heading: "Body and Fitness::",
     discription:
