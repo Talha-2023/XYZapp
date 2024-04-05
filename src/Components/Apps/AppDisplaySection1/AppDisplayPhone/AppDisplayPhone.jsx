@@ -1,15 +1,29 @@
+import React, { useState } from "react";
 import styles from "./AppDisplayPhone.module.css";
 import { TbClick } from "react-icons/tb";
 import { FaVolumeHigh } from "react-icons/fa6";
 import { IoCloseCircle } from "react-icons/io5";
 
-import { useState } from "react";
-const AppDisplayPhone = ({ discription }) => {
+const AppDisplayPhone = ({ discription, audio }) => {
   const [display, setDisplay] = useState(false);
 
   const HandleDisplay = () => {
     setDisplay(!display);
   };
+
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = React.createRef();
+
+  const togglePlay = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+  const iconClass = isPlaying ? styles.icon_active : styles.icon_inactive;
 
   return (
     <>
@@ -20,10 +34,10 @@ const AppDisplayPhone = ({ discription }) => {
       {display && (
         <>
           <div className={styles.know_me_description}>
+            <audio ref={audioRef} src={`/${audio}.mp3`}></audio>
             <p>
-              <FaVolumeHigh style={{ color: "orange", fontSize: "20px" }} />
+              <FaVolumeHigh className={iconClass} onClick={togglePlay} /> &nbsp;
               {discription}
-              {console.log(discription)}
             </p>
             <div className={styles.arrow}></div>
             <div className={styles.closeButton} onClick={HandleDisplay}>

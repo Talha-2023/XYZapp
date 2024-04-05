@@ -17,13 +17,13 @@
   font-family: "Megrim", system-ui;
   font-size: clamp(30px, 5vw, 45px);
   color: white;
-  -webkit-text-stroke: 2px white;
+  -webkit-text-stroke: 3px white;
 }
 .talha {
   font-family: "Megrim", system-ui;
   font-size: clamp(30px, 5vw, 45px);
   color: orange;
-  -webkit-text-stroke: 2px orange;
+  -webkit-text-stroke: 3px orange;
 }
 .bottom_container {
   margin-top: 14px;

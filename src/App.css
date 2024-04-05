@@ -20,5 +20,5 @@ body {
   border-radius: 10px;
 }
 ::selection {
-  background: rgb(0, 208, 255);
+  background: rgba(90, 225, 255, 0.846);
 }

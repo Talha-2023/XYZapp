@@ -53,7 +53,42 @@
   right: 40px;
   transform: rotate(45deg);
 }
+.icon_inactive {
+  color: orange;
+  font-size: 25px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: -5px;
+  transition: 0.2s;
+}
+.icon_inactive:hover {
+  transform: scale(1.2);
+  color: rgb(255, 192, 76);
+}
+.icon_active {
+  color: aqua;
+  font-size: 25px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: -5px;
+  transition: 0.2s;
+  animation: move 0.3s ease-in-out infinite;
+}
+.icon_active:hover {
+  transform: scale(1.2);
+  color: aquamarine;
+}
 
+@keyframes move {
+  0% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1.4);
+    color: rgb(0, 174, 174);
+  }
+}
 @media screen and (max-width: 800px) {
   .know_me {
     display: block;

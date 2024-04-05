@@ -15,7 +15,7 @@ import Talha from "./Talha";
 // import Talha from "./Talha.jsx";
 // import Data from "./Data.js";
 
-const AppContainer = ({ id, heading, discription, apps }) => {
+const AppContainer = ({ id, heading, discription, apps, audio }) => {
   // const Data = [
   //   {
   //     heading: "Body and Fitness:",
@@ -66,11 +66,15 @@ const AppContainer = ({ id, heading, discription, apps }) => {
           heading={heading}
           discription={discription}
           apps={apps}
+          audio={audio}
         />
 
-        <AppsDescriptionSection2 key={heading} discription={discription} />
+        <AppsDescriptionSection2
+          key={heading}
+          discription={discription}
+          audio={audio}
+        />
       </div>
-      {console.log(heading)}
 
       <DeviderLine />
     </>

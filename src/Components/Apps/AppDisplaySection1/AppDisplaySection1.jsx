@@ -1,10 +1,9 @@
-import React, { useState } from "react";
 import styles from "./AppDisplaySection1.module.css";
 
 import AppCard from "../AppCard/AppCard";
 import AppDisplayPhone from "./AppDisplayPhone/AppDisplayPhone";
 
-const AppDisplaySection1 = ({ heading, discription, apps }) => {
+const AppDisplaySection1 = ({ heading, discription, apps, audio }) => {
   return (
     <div className={styles.app_container}>
       <div className={styles.top_section}>
@@ -16,7 +15,7 @@ const AppDisplaySection1 = ({ heading, discription, apps }) => {
           <div className={styles.aqua_dot}></div>
         </div>
 
-        <AppDisplayPhone discription={discription} />
+        <AppDisplayPhone discription={discription} audio={audio} />
       </div>
 
       <div className={styles.apps_cards}>

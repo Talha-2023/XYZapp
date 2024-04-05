@@ -8,17 +8,12 @@ const Sidebar = () => {
   return (
     <div className={styles.Sidebar_Container}>
       <div className={styles.my_apps}>
-        <RiApps2Fill style={{ fontSize: "40px", margin: "10px" }} />
+        <RiApps2Fill className={styles.icon} />
         My Apps
       </div>
 
       <DeviderLine />
 
-      <Categories1 />
-      <Categories1 />
-      <Categories1 />
-      <Categories1 />
-      <Categories1 />
       <Categories1 />
     </div>
   );
