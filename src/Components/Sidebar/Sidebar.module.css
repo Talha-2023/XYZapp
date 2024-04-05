@@ -1,10 +1,10 @@
 .Sidebar_Container {
-  width: 220px;
+  width: 251px;
   border-radius: 50px;
   background: rgba(0, 0, 0, 0.22);
   position: relative;
-  top: 50px;
-  left: 60px;
+  top: 10px;
+  left: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,15 +12,15 @@
   padding: 40px 0px;
 }
 .icon {
-  font-size: 30px;
+  font-size: 40px;
   margin: 10px;
 }
 
 .my_apps {
   font-family: "Megrim", system-ui;
-  font-size: 29px;
+  font-size: 33px;
   color: rgb(255, 255, 255);
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  -webkit-text-stroke: 2px white;
   display: flex;
   justify-content: center;
   align-items: center;

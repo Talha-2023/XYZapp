@@ -8,6 +8,7 @@ import TopContainer from "./Components/TopContainer/TopContainer";
 import Sidebar from "./Components/Sidebar/Sidebar";
 
 import Data from "./Data/Data.jsx";
+import Test from "./Test.jsx";
 
 function App() {
   // const Data = [
@@ -76,6 +77,8 @@ function App() {
       </div> */}
 
       <Sidebar />
+
+      <Test></Test>
     </>
   );
 }
