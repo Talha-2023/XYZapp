@@ -4,7 +4,7 @@ import { TbApps } from "react-icons/tb";
 import { MdOutlineSpaceDashboard } from "react-icons/md";
 import Categories1 from "./Categories1";
 
-const Sidebar = () => {
+const Sidebar = ({ Data }) => {
   return (
     <div className={styles.Sidebar_Container}>
       <div className={styles.my_apps}>
@@ -14,11 +14,7 @@ const Sidebar = () => {
 
       <DeviderLine />
 
-      <Categories1 />
-      <Categories1 />
-      <Categories1 />
-      <Categories1 />
-      <Categories1 />
+      <Categories1 Data={Data} />
     </div>
   );
 };

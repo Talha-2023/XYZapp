@@ -4,30 +4,49 @@ import { FaCircleChevronDown } from "react-icons/fa6";
 import AppList from "./AppList";
 import { useState } from "react";
 
-const Categories1 = () => {
-  const [show, setShow] = useState(false);
+const Categories1 = ({ Data }) => {
+  const [openDropdown, setOpenDropdown] = useState(false);
+
+  const toggleDropdown = (heading1) => {
+    setOpenDropdown(openDropdown === heading1 ? false : heading1);
+  };
+
+  const nameClass = openDropdown === Data[0].heading ? "nameOpen" : "name";
+
+  console.log(nameClass);
 
   return (
     <>
-      <div className={styles.sidebar}>
-        <div className={styles.sidebar_cat} onClick={() => setShow(!show)}>
-          <p className={styles.name}>Body and Fitness </p>
-          <FaCircleChevronDown className={styles.arrow} />
-        </div>
+      {Data.map((data) => (
+        <div key={data.heading} className={styles.sidebar}>
+          <div
+            className={styles.sidebar_cat}
+            onClick={() => toggleDropdown(data.heading)}
+          >
+            <p
+              className={`${
+                styles[openDropdown === data.heading ? "nameOpen" : "name"]
+              }`}
+            >
+              {data.heading}
+            </p>
 
-        {show && (
-          <div className={styles.sidebar_bg}>
-            <AppList></AppList>
-            <AppList></AppList>
-            <AppList></AppList>
-            <AppList></AppList>
-            <AppList></AppList>
-            <AppList></AppList>
-            <AppList></AppList>
-            <AppList></AppList>
+            <FaCircleChevronDown
+              className={styles.arrow}
+              style={{
+                transform: openDropdown === data.heading && "rotate(180deg)",
+                color: openDropdown === data.heading && "aqua",
+              }}
+            />
           </div>
-        )}
-      </div>
+
+          {openDropdown === data.heading && (
+            <div className={styles.sidebar_bg}>
+              <AppList App={data.apps}></AppList>
+            </div>
+          )}
+        </div>
+      ))}
     </>
   );
 };

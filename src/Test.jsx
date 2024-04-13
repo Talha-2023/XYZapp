@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import AppList from "./Components/Sidebar/AppList";
 
 function Test() {
   const [openDropdown, setOpenDropdown] = useState(false);
 
   const toggleDropdown = (dropdownId) => {
     setOpenDropdown(openDropdown === dropdownId ? false : dropdownId);
+    console.log(openDropdown === dropdownId ? false : dropdownId);
   };
 
   // Sample array of dropdown items
@@ -16,13 +18,15 @@ function Test() {
   ];
 
   return (
-    <div>
+    <div style={{ margin: "50px" }}>
       {dropdownItems.map((dropdown) => (
         <div key={dropdown.id}>
           <button onClick={() => toggleDropdown(dropdown.id)}>
             {dropdown.name}
           </button>
-          {openDropdown === dropdown.id && <div>hiiii</div>}
+          {openDropdown === dropdown.id && (
+            <div style={{ color: "white" }}>Hello</div>
+          )}
         </div>
       ))}
     </div>

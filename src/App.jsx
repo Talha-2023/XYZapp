@@ -4,11 +4,11 @@ import AppContainer from "./Components/Apps/AppContainer/AppContainer";
 import DeviderLine from "./Components/DeviderLine/DeviderLine";
 import Navbar from "./Components/Navbar/Navbar";
 import TopContainer from "./Components/TopContainer/TopContainer";
-
 import Sidebar from "./Components/Sidebar/Sidebar";
 
 import Data from "./Data/Data.jsx";
-import Test from "./Test.jsx";
+import BMICalculator from "./Components/AppsDisplay/BodyAndFitness/BMICalculator.jsx";
+import { Page2 } from "./Components/Page2/Page2.jsx";
 
 function App() {
   // const Data = [
@@ -55,13 +55,13 @@ function App() {
 
   return (
     <>
-      <BackGround></BackGround>
-
+      <BackGround />
       <Navbar />
 
-      {/* <div className="MAIN">
-        <TopContainer />
+      <main className="MAIN">
+        {/* <TopContainer />
         <DeviderLine />
+        
         {Data.map((Data, index) => {
           return (
             <AppContainer
@@ -73,12 +73,11 @@ function App() {
               audio={Data.audio}
             />
           );
-        })}
-      </div> */}
-
-      <Sidebar />
-
-      <Test></Test>
+        })} */}
+        <Page2 Data={Data} />
+        {/* <Sidebar Data={Data} />
+        <BMICalculator /> */}
+      </main>
     </>
   );
 }

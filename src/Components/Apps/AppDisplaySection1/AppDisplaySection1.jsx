@@ -7,7 +7,7 @@ const AppDisplaySection1 = ({ heading, discription, apps, audio }) => {
   return (
     <div className={styles.app_container}>
       <div className={styles.top_section}>
-        <div className={styles.heading}>{heading}</div>
+        <div className={styles.heading}>{heading} :</div>
 
         <div className={styles.logo_design}>
           <div className={styles.orange_dot}></div>

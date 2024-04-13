@@ -1,15 +1,12 @@
-import styles from "./AppList.module.css"
-import { SlSpeedometer } from "react-icons/sl";
+import styles from "./AppList.module.css";
 
-const AppList = () => {
-  return (
-    
-    <div className={styles.sidebar_apps}>
-      <SlSpeedometer className={styles.app_icon} />
-      <p> BMI Calculator</p>
+const AppList = ({ App }) => {
+  return App.map((app) => (
+    <div className={styles.sidebar_apps} key={app.app_name}>
+      <div className={styles.app_icon}> {app.icon}</div>
+      <p className={styles.app_name}> {app.app_name}</p>
     </div>
- 
-  )
-}
+  ));
+};
 
-export default AppList
+export default AppList;

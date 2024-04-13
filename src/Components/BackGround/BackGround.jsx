@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./BackGround.module.css";
 import PartBg from "./PartBg";
-const BackGround = () => {
+const BackGround = ({ children }) => {
   return (
     <div className={styles.MainBgCont}>
       <div className={styles.Group_MainBgCont}>
