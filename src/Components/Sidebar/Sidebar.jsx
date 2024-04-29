@@ -1,7 +1,6 @@
 import DeviderLine from "../DeviderLine/DeviderLine";
 import styles from "./Sidebar.module.css";
 import { TbApps } from "react-icons/tb";
-import { MdOutlineSpaceDashboard } from "react-icons/md";
 import Categories1 from "./Categories1";
 
 const Sidebar = ({ Data }) => {

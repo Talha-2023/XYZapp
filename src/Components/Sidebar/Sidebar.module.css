@@ -8,6 +8,7 @@
   align-items: center;
   box-shadow: 0px 0px 0px 2px #000000;
   padding: 40px 0px;
+  height: fit-content;
 }
 .Sidebar_Container:hover .my_apps {
   color: #fab440;
@@ -17,8 +18,7 @@
 .icon {
   font-size: 40px;
   margin: 10px;
-  animation: rotate 7s infinite ease-in-out;
-
+  animation: rotate 7s 2s infinite ease-in-out;
   /* animation: name duration timing-function delay iteration-count direction
     fill-mode; */
 }
@@ -64,4 +64,10 @@
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+}
+
+@media screen and (max-width: 800px) {
+  .Sidebar_Container {
+    display: none;
+  }
 }

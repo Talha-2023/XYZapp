@@ -7,6 +7,8 @@ import DeviderLine from "../../DeviderLine/DeviderLine";
 const AppContainer = ({ id, heading, discription, apps, audio }) => {
   return (
     <>
+      <DeviderLine />
+
       <div className={styles.main_container}>
         <AppDisplaySection1
           key={id}
@@ -22,8 +24,6 @@ const AppContainer = ({ id, heading, discription, apps, audio }) => {
           audio={audio}
         />
       </div>
-
-      <DeviderLine />
     </>
   );
 };

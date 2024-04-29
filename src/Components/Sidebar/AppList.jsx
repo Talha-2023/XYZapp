@@ -5,6 +5,7 @@ const AppList = ({ App }) => {
     <div className={styles.sidebar_apps} key={app.app_name}>
       <div className={styles.app_icon}> {app.icon}</div>
       <p className={styles.app_name}> {app.app_name}</p>
+      {console.log(app.app_name)}
     </div>
   ));
 };

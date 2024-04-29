@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaVolumeHigh } from "react-icons/fa6";
 import styles from "./AppsDescriptionSection2.module.css";
+import { IoIosSettings } from "react-icons/io";
 
 const AppsDescriptionSection2 = ({ discription, audio }) => {
   // const play = () => {
@@ -24,7 +25,7 @@ const AppsDescriptionSection2 = ({ discription, audio }) => {
   return (
     <div className={styles.app_discription}>
       <div className={styles.img_container}>
-        <img src="BodyAndFitness2.png" alt="image" />
+        <img src={`/${audio}.png`} alt="image" />
         <div className={styles.gif_shadow}></div>
       </div>
 
@@ -38,15 +39,26 @@ const AppsDescriptionSection2 = ({ discription, audio }) => {
 
       <p className={styles.colen}>"</p>
       <p className={styles.pattern}>
-        .....x.....
+        . <IoIosSettings className={styles.rotate} />
+        .....
+        <IoIosSettings className={styles.rotate} />
+        .....
         <br />
-        x..........
+        <IoIosSettings className={styles.rotate} />
+        ....... <IoIosSettings className={styles.rotate} />
+        ....
         <br />
-        ...........
+        .....
+        <IoIosSettings className={styles.rotate} />
+        ......
         <br />
-        .........x.
+        .........
+        <IoIosSettings className={styles.rotate} />
+        .
         <br />
-        .....x.....
+        .....
+        <IoIosSettings className={styles.rotate} />
+        .... <IoIosSettings className={styles.rotate} />.
       </p>
     </div>
   );

@@ -1,5 +1,8 @@
 .page2 {
   display: flex;
   padding: 40px 10px 10px 10px;
-  column-gap: 30px;
+  column-gap: 45px;
+}
+.display_container {
+  width: 73%;
 }

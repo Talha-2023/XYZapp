@@ -10,6 +10,7 @@
   box-shadow: 0px 0px 20px 1px#443cae72;
   font-weight: 900;
   transition: 0.1s ease-out;
+  cursor: pointer;
 }
 .icon {
   font-size: 50px;

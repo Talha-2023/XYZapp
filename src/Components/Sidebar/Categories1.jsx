@@ -13,8 +13,6 @@ const Categories1 = ({ Data }) => {
 
   const nameClass = openDropdown === Data[0].heading ? "nameOpen" : "name";
 
-  console.log(nameClass);
-
   return (
     <>
       {Data.map((data) => (
