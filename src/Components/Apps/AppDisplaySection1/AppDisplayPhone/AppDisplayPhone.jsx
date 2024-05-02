@@ -1,33 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./AppDisplayPhone.module.css";
 import { TbClick } from "react-icons/tb";
 import { FaVolumeHigh } from "react-icons/fa6";
 import { IoCloseCircle } from "react-icons/io5";
 
+import { HandleDisplay } from "../../../../Store/Features/DisToggle";
+import { HandleTogglePlay } from "../../../../Store/Features/TogglePlay";
+import { useDispatch, useSelector } from "react-redux";
+
 const AppDisplayPhone = ({ discription, audio }) => {
-  const [display, setDisplay] = useState(false);
+  const display = useSelector((state) => state.DisToggle.value);
+  const dispatch = useDispatch();
 
-  const HandleDisplay = () => {
-    setDisplay(!display);
-  };
+  const Audio = useSelector((state) => state.TogglePlay.value);
 
-  const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = React.createRef();
 
-  const togglePlay = () => {
-    if (isPlaying) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-    } else {
-      audioRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
-  const iconClass = isPlaying ? styles.icon_active : styles.icon_inactive;
+  const iconClass = Audio ? styles.icon_active : styles.icon_inactive;
 
   return (
     <>
-      <div className={styles.know_me} onClick={HandleDisplay}>
+      <div className={styles.know_me} onClick={() => dispatch(HandleDisplay())}>
         Know Me &nbsp; <TbClick />
       </div>
 
@@ -36,14 +29,24 @@ const AppDisplayPhone = ({ discription, audio }) => {
           <div className={styles.know_me_description}>
             <audio ref={audioRef} src={`/${audio}.mp3`}></audio>
             <p>
-              <FaVolumeHigh className={iconClass} onClick={togglePlay} /> &nbsp;
+              <FaVolumeHigh
+                className={iconClass}
+                onClick={() => dispatch(HandleTogglePlay(audioRef))}
+              />{" "}
+              &nbsp;
               {discription}
             </p>
             <div className={styles.arrow}></div>
-            <div className={styles.closeButton} onClick={HandleDisplay}>
+            <div
+              className={styles.closeButton}
+              onClick={() => {
+                dispatch(HandleDisplay());
+              }}
+            >
               <IoCloseCircle />
             </div>
           </div>
+          {console.log(audioRef)}
         </>
       )}
     </>

@@ -11,24 +11,32 @@
   font-weight: 900;
   transition: 0.1s ease-out;
   cursor: pointer;
+
+  &:hover {
+    color: #128899;
+    box-shadow: 5px 10px 0px 0px #433cae;
+    border: 2px solid black;
+    transform: translate(-5px, -12px);
+    border-radius: 20px;
+    text-shadow: 0px 0px 15px #00ddff;
+  }
+  &:hover .icon {
+    transition: 0.1s ease-out;
+    transform: scale(1.1);
+  }
 }
 .icon {
   font-size: 50px;
+  color: #2d2d2d;
 }
+
 .app p {
   width: 80%;
   text-align: center;
   font-size: 15px;
   font-family: "Nova Square", sans-serif;
 }
-.app:hover {
-  color: #128899;
-  box-shadow: 5px 10px 0px 0px #433cae;
-  border: 2px solid black;
-  transform: translate(-5px, -12px);
-  border-radius: 20px;
-  text-shadow: 0px 0px 15px #00ddff;
-}
+
 @media screen and (max-width: 435px) {
   .app {
     width: 130px;

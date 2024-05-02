@@ -2,6 +2,7 @@ import styles from "./Page2.module.css";
 import { useParams } from "react-router-dom";
 
 import Sidebar from "../Sidebar/Sidebar";
+
 import BMICalculator from "../AppsDisplay/BodyAndFitness/BMICalculator/BMICalculator";
 import BodyFatPercentage from "../AppsDisplay/BodyAndFitness/BodyFatPercentage/BodyFatPercentage";
 import CaloricBurnCalculator from "../AppsDisplay/BodyAndFitness/CaloricBurnCalculator/CaloricBurnCalculator";
@@ -56,7 +57,7 @@ const components = {
   TipCalculator,
 };
 
-export const Page2 = ({ Data }) => {
+const Page2 = ({ Data }) => {
   let { cardName } = useParams();
 
   const Component = components[cardName];
@@ -70,7 +71,8 @@ export const Page2 = ({ Data }) => {
         <Path cardName={cardName}></Path>
         {Component ? <Component /> : <div>Component not found</div>}
       </div>
-      {console.log(cardName)}
     </div>
   );
 };
+
+export default Page2;

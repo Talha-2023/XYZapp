@@ -12,7 +12,7 @@ nav {
   margin: auto;
   background-color: #16274d;
   box-shadow: 0px 0px 100px 90px #16274d;
-  animation: border 7s 1.5s ease-in-out infinite;
+  animation: border 10s 5s ease-in-out infinite;
 }
 nav .logo_cont {
   margin-top: 20px;

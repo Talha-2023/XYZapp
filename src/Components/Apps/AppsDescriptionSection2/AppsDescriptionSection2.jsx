@@ -1,26 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaVolumeHigh } from "react-icons/fa6";
 import styles from "./AppsDescriptionSection2.module.css";
 import { IoIosSettings } from "react-icons/io";
 
+import { HandleTogglePlay } from "../../../Store/Features/TogglePlay";
+import { useDispatch, useSelector } from "react-redux";
+
 const AppsDescriptionSection2 = ({ discription, audio }) => {
-  // const play = () => {
-  //   new Audio(`/${audio}.mp3`).play();
-  // };
-
-  const [isPlaying, setIsPlaying] = useState(false);
+  const dispatch = useDispatch();
+  const Audio = useSelector((state) => state.TogglePlay.value);
   const audioRef = React.createRef();
-
-  const togglePlay = () => {
-    if (isPlaying) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-    } else {
-      audioRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
-  const iconClass = isPlaying ? styles.icon_active : styles.icon_inactive;
+  const iconClass = Audio ? styles.icon_active : styles.icon_inactive;
 
   return (
     <div className={styles.app_discription}>
@@ -32,7 +22,10 @@ const AppsDescriptionSection2 = ({ discription, audio }) => {
       <div className={styles.discription}>
         <audio ref={audioRef} src={`/${audio}.mp3`}></audio>
         <p className={styles.dis}>
-          <FaVolumeHigh className={iconClass} onClick={togglePlay} />
+          <FaVolumeHigh
+            className={iconClass}
+            onClick={() => dispatch(HandleTogglePlay(audioRef))}
+          />
           &nbsp; {discription}
         </p>
       </div>
