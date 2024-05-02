@@ -1,12 +1,9 @@
 import styles from "./AppList.module.css";
+import AppItem from "./AppItem";
 
 const AppList = ({ App }) => {
   return App.map((app) => (
-    <div className={styles.sidebar_apps} key={app.app_name}>
-      <div className={styles.app_icon}> {app.icon}</div>
-      <p className={styles.app_name}> {app.app_name}</p>
-      {console.log(app.app_name)}
-    </div>
+    <AppItem name={app.app_name} icon={app.icon} key={app.app_name}></AppItem>
   ));
 };
 

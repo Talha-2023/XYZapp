@@ -1,0 +1,63 @@
+.sidebar_apps {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-radius: 12px;
+  color: black;
+  transition: 0.1s ease-out;
+  background-color: #ffffff;
+  width: 85%;
+  cursor: pointer;
+  padding: 8px 10px;
+  gap: 15px;
+  box-shadow: inset -4px -5px 20px 0px #84848485;
+
+  &:hover {
+    text-shadow: 0px 0px 1px #000000;
+    border-radius: 10px;
+    box-shadow: none;
+    background-image: linear-gradient(to left, #ffffff, rgb(183, 245, 255));
+    transform: scale(1.1);
+  }
+}
+
+.app_name {
+  font-size: 14px;
+  /* font-family: "Nova Square", sans-serif; */
+  font-family: "Metrophobic", sans-serif;
+  font-weight: 600;
+}
+.app_icon {
+  font-size: 30px;
+}
+.active {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-shadow: 0px 0px 1px #000000;
+  border-radius: 10px;
+  color: black;
+  transition: 0.1s ease-out;
+  background-image: linear-gradient(to left, #ffffff, rgb(0, 193, 223));
+  transform: scale(1.05);
+  width: 85%;
+  cursor: pointer;
+  padding: 8px 10px;
+  gap: 15px;
+  box-shadow: 0px 0px 10px 0px aqua;
+}
+.active::after {
+  content: "";
+  width: 40%;
+  border: 2px solid rgb(255, 255, 255);
+  position: absolute;
+  right: -72px;
+  box-shadow: 0px 0px 20px 3px white;
+  animation: line 3s ease-in-out infinite;
+}
+
+@keyframes line {
+  50% {
+    box-shadow: 0px 0px 10px 2px white;
+  }
+}

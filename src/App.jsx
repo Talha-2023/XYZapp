@@ -1,12 +1,12 @@
 import "./App.css";
 import { Suspense, React, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Test from "./Test.jsx";
 import BackGround from "./Components/BackGround/BackGround";
-import Navbar from "./Components/Navbar/Navbar";
+import Navbar from "./Components/Footer_NavBar/Navbar.jsx";
 import Data from "./Data/Data.jsx";
 // import Page2 from "./Components/Page2/Page2.jsx";
 import HomeLoading from "./Components/LoadingSkeleton/HomeLoading/HomeLoading.jsx";
+import FooterComp from "./Components/Footer_NavBar/FooterComp.jsx";
 // import Home from "./Components/Home/Home.jsx";
 
 const Page2 = lazy(() => import("./Components/Page2/Page2.jsx"));
@@ -34,6 +34,7 @@ function App() {
         </main>
       </Router>
       {/* <HomeLoading></HomeLoading> */}
+      <FooterComp />
     </>
   );
 }

@@ -5,15 +5,15 @@ import { MdOutlineSpaceDashboard } from "react-icons/md";
 const Path = ({ cardName }) => {
   return (
     <div className={styles.path}>
-      <ul>
-        <Link to="/">
-          <li className="li">
-            <MdOutlineSpaceDashboard style={{ fontSize: "25px" }} /> DashBoard
-          </li>
-        </Link>
+      <Link to="/" className="link">
+        <p className={styles.home}>
+          <MdOutlineSpaceDashboard className={styles.icon} /> DashBoard
+        </p>
+      </Link>
 
-        <li className="li"> &nbsp; / {cardName}</li>
-      </ul>
+      <div className={styles.currentPath}>
+        <p> /&nbsp;&nbsp;{cardName}</p>
+      </div>
     </div>
   );
 };

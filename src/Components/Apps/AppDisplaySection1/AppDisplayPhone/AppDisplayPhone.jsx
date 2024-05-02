@@ -46,7 +46,6 @@ const AppDisplayPhone = ({ discription, audio }) => {
               <IoCloseCircle />
             </div>
           </div>
-          {console.log(audioRef)}
         </>
       )}
     </>

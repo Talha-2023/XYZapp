@@ -61,7 +61,6 @@ const Page2 = ({ Data }) => {
   let { cardName } = useParams();
 
   const Component = components[cardName];
-
   return (
     <div className={styles.page2}>
       {window.scrollTo(0, 0)}

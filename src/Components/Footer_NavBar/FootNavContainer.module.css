@@ -1,0 +1,12 @@
+.design_continer {
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #16274d;
+  box-shadow: 0px 0px 100px 90px #16274d;
+  animation: border 7s 5s ease-in-out infinite;
+}

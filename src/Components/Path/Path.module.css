@@ -1,34 +1,36 @@
 .path {
   width: fit-content;
   display: flex;
-  padding: 30px 0px 30px 40px;
+  padding: 2px 20px;
+  border-radius: 50px;
+  background-color: #433cae;
+  margin: 0px 30px 10px 30px;
+  gap: 10px;
 }
-.path ul {
-  font-size: clamp(11px, 1.5vw, 18px);
-
-  font-family: "Nova Square", sans-serif;
-  list-style-type: none;
-  color: rgba(255, 255, 255, 0.381);
-  display: flex;
-  letter-spacing: 0.5px;
-}
-.path ul li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.path ul li:hover {
+.home {
   color: white;
+  font-family: "Yusei Magic", sans-serif;
+  letter-spacing: 1px;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 1px;
+  &:hover {
+    background-color: #857ee7;
+    border-radius: 20px;
+    padding: 1px 20px;
+  }
 }
-
-@media screen and (max-width: 800px) {
-  .container {
-    width: 90%;
-  }
-  .path ul {
-    font-family: "Metrophobic", sans-serif;
-  }
-  .path {
-    padding: 30px 0px 30px 10px;
-  }
+.currentPath p {
+  color: white;
+  font-family: "Yusei Magic", sans-serif;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+.icon {
+  font-size: 16px;
 }

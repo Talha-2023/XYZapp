@@ -1,0 +1,11 @@
+.footer {
+  margin: 20px;
+  display: grid;
+  place-items: center;
+}
+.footer p {
+  margin: 10px;
+  font-family: "Noto Sans", sans-serif;
+  color: white;
+  font-size: 12px;
+}

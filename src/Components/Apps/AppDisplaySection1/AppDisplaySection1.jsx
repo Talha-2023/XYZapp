@@ -1,11 +1,16 @@
 import styles from "./AppDisplaySection1.module.css";
-
 import AppCard from "../AppCard/AppCard";
 import AppDisplayPhone from "./AppDisplayPhone/AppDisplayPhone";
-
+import { useDispatch } from "react-redux";
+import { HandleHeading } from "../../../Store/Features/Heading";
+import { HomeHeading } from "../../../Store/Features/SidebarCategories";
 const AppDisplaySection1 = ({ heading, discription, apps, audio }) => {
+  const dispatch = useDispatch();
   return (
-    <div className={styles.app_container}>
+    <div
+      className={styles.app_container}
+      onClick={() => dispatch(HomeHeading(heading))}
+    >
       <div className={styles.top_section}>
         <div className={styles.heading}>{heading} :</div>
 

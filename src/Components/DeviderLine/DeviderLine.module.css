@@ -10,14 +10,33 @@
 .orange {
   width: 50%;
   border-top: 2px solid #fab440;
+  animation: orangeAnimation 5s infinite ease-in-out;
 }
 .purple {
   width: 30%;
   border-top: 2px solid #433cae;
+  animation: purpleAnimation 5s infinite ease-in-out;
 }
 .aqua {
   width: 20%;
   border-top: 2px solid#128899;
+  animation: aquaAnimation 5s infinite ease-in-out;
+}
+@keyframes orangeAnimation {
+  50% {
+    box-shadow: 0px 0px 50px 2px #ffbe56;
+  }
+}
+@keyframes purpleAnimation {
+  50% {
+    box-shadow: 0px 0px 50px 2px #9e99f1;
+  }
+}
+
+@keyframes aquaAnimation {
+  50% {
+    box-shadow: 0px 0px 50px 2px #8cdeeb;
+  }
 }
 
 @media screen and (max-width: 800px) {
