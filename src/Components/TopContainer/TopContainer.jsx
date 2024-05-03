@@ -11,7 +11,9 @@ const TopContainer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.creator_container}>
-        <p>Web Apps By </p> <span className={styles.talha}>&nbsp;Talha </span>
+        <p>
+          Web Apps By <span className={styles.talha}>Talha </span>
+        </p>
       </div>
       <div className={styles.bottom_container}>
         <div className={styles.para_container}>

@@ -15,13 +15,11 @@
 
 .creator_container p {
   font-family: "Megrim", system-ui;
-  font-size: clamp(30px, 5vw, 45px);
+  font-size: 50px;
   color: white;
   -webkit-text-stroke: 3px white;
 }
 .talha {
-  font-family: "Megrim", system-ui;
-  font-size: clamp(30px, 5vw, 45px);
   color: orange;
   -webkit-text-stroke: 3px orange;
 }
@@ -36,9 +34,10 @@
   width: fit-content;
 }
 .para_container p {
-  font-size: clamp(14px, 2.5vw, 18px);
+  font-size: 18px;
   font-family: "Metrophobic", sans-serif;
   color: white;
+  margin-bottom: 5px;
 }
 .icon_container {
   display: flex;
@@ -50,51 +49,44 @@
 }
 .icon_container .icon {
   color: white;
-
-  font-size: 18px;
+  font-size: 20px;
   margin-left: 8px;
 }
 @media screen and (max-width: 800px) {
-  .creator_container p {
-    -webkit-text-stroke: 1px white;
-  }
-  .icon_container .icon {
-    color: white;
-    font-size: 14px;
-    margin-left: 5px;
-  }
   .container {
     margin-top: 15%;
   }
 }
-@media screen and (max-width: 387px) {
-  .para_container p {
-    font-size: 13px;
+
+@media screen and (max-width: 500px) {
+  .bottom_container {
+    display: block;
   }
-  .para_container {
-    width: fit-content;
+  .icon_container {
+    margin-left: -5px;
+    margin-top: 10px;
   }
 }
-
+@media screen and (max-width: 387px) {
+  .creator_container p {
+    font-size: 40px;
+  }
+}
+/* 
 @media screen and (max-width: 370px) {
   .para_container p {
     font-size: 9px;
-  }
-  .icon_container .icon {
-    font-size: 11px;
   }
 }
 @media screen and (max-width: 310px) {
   .para_container p {
     font-size: 8px;
   }
-  .icon_container .icon {
-    font-size: 10px;
-  }
+
   .creator_container p {
     font-size: 25px;
   }
   .creator_container talha {
     font-size: 25px;
   }
-}
+} */
