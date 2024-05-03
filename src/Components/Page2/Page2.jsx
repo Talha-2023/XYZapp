@@ -2,33 +2,96 @@ import styles from "./Page2.module.css";
 import { useParams } from "react-router-dom";
 
 import Sidebar from "../Sidebar/Sidebar";
+import { Suspense, lazy } from "react";
+import AppDisplayLoading from "../Loading/AppDisplayLoading";
 
-import BMICalculator from "../AppsDisplay/BodyAndFitness/BMICalculator/BMICalculator";
-import BodyFatPercentage from "../AppsDisplay/BodyAndFitness/BodyFatPercentage/BodyFatPercentage";
-import CaloricBurnCalculator from "../AppsDisplay/BodyAndFitness/CaloricBurnCalculator/CaloricBurnCalculator";
-import CheckYourWaterIntake from "../AppsDisplay/BodyAndFitness/CheckYourWaterIntake/CheckYourWaterIntake";
-import IdealWeightCalculator from "../AppsDisplay/BodyAndFitness/IdealWeightCalculator/IdealWeightCalculator";
-import NutritionalValueCalculator from "../AppsDisplay/BodyAndFitness/NutritionalValueCalculator/NutritionalValueCalculator";
-import RunningRoutePlanner from "../AppsDisplay/BodyAndFitness/RunningRoutePlanner/RunningRoutePlanner";
-import SleepTracker from "../AppsDisplay/BodyAndFitness/SleepTracker/SleepTracker";
-import AreaAndPerimeterCalculator from "../AppsDisplay/Education/AreaAndPerimeterCalculator/AreaAndPerimeterCalculator";
-import AttendanceCalculator from "../AppsDisplay/Education/AttendanceCalculator/AttendanceCalculator";
-import GPACalculator from "../AppsDisplay/Education/GPACalculator/GPACalculator";
-import GradeConverter from "../AppsDisplay/Education/GradeConverter/GradeConverter";
-import KawaiiHabitTracker from "../AppsDisplay/Education/KawaiiHabitTracker/KawaiiHabitTracker";
-import RectangleAreaCalculator from "../AppsDisplay/Education/RectangleAreaCalculator/RectangleAreaCalculator";
-import Todo from "../AppsDisplay/Education/Todo/Todo";
-import TriangleSolver from "../AppsDisplay/Education/TriangleSolver/TriangleSolver";
-import CurrencyConverter from "../AppsDisplay/Financial/CurrencyConverter/CurrencyConverter";
-import EMICalculator from "../AppsDisplay/Financial/EMICalculator/EMICalculator";
-import ExpenseTracker from "../AppsDisplay/Financial/ExpenseTracker/ExpenseTracker";
-import InterestCalculator from "../AppsDisplay/Financial/InterestCalculator/InterestCalculator";
-import LoanRepaymentCalculator from "../AppsDisplay/Financial/LoanRepaymentCalculator/LoanRepaymentCalculator";
-import MortgageCalculator from "../AppsDisplay/Financial/MortgageCalculator/MortgageCalculator";
-import SavingsGoalTracker from "../AppsDisplay/Financial/SavingsGoalTracker/SavingsGoalTracker";
-import TipCalculator from "../AppsDisplay/Financial/TipCalculator/TipCalculator";
-
-import Path from "../Path/Path";
+const BMICalculator = lazy(() =>
+  import("../AppsDisplay/BodyAndFitness/BMICalculator/BMICalculator")
+);
+const BodyFatPercentage = lazy(() =>
+  import("../AppsDisplay/BodyAndFitness/BodyFatPercentage/BodyFatPercentage")
+);
+const CaloricBurnCalculator = lazy(() =>
+  import(
+    "../AppsDisplay/BodyAndFitness/CaloricBurnCalculator/CaloricBurnCalculator"
+  )
+);
+const CheckYourWaterIntake = lazy(() =>
+  import(
+    "../AppsDisplay/BodyAndFitness/CheckYourWaterIntake/CheckYourWaterIntake"
+  )
+);
+const IdealWeightCalculator = lazy(() =>
+  import(
+    "../AppsDisplay/BodyAndFitness/IdealWeightCalculator/IdealWeightCalculator"
+  )
+);
+const NutritionalValueCalculator = lazy(() =>
+  import(
+    "../AppsDisplay/BodyAndFitness/NutritionalValueCalculator/NutritionalValueCalculator"
+  )
+);
+const RunningRoutePlanner = lazy(() =>
+  import(
+    "../AppsDisplay/BodyAndFitness/RunningRoutePlanner/RunningRoutePlanner"
+  )
+);
+const SleepTracker = lazy(() =>
+  import("../AppsDisplay/BodyAndFitness/SleepTracker/SleepTracker")
+);
+const AreaAndPerimeterCalculator = lazy(() =>
+  import(
+    "../AppsDisplay/Education/AreaAndPerimeterCalculator/AreaAndPerimeterCalculator"
+  )
+);
+const AttendanceCalculator = lazy(() =>
+  import("../AppsDisplay/Education/AttendanceCalculator/AttendanceCalculator")
+);
+const GPACalculator = lazy(() =>
+  import("../AppsDisplay/Education/GPACalculator/GPACalculator")
+);
+const GradeConverter = lazy(() =>
+  import("../AppsDisplay/Education/GradeConverter/GradeConverter")
+);
+const KawaiiHabitTracker = lazy(() =>
+  import("../AppsDisplay/Education/KawaiiHabitTracker/KawaiiHabitTracker")
+);
+const RectangleAreaCalculator = lazy(() =>
+  import(
+    "../AppsDisplay/Education/RectangleAreaCalculator/RectangleAreaCalculator"
+  )
+);
+const Todo = lazy(() => import("../AppsDisplay/Education/Todo/Todo"));
+const TriangleSolver = lazy(() =>
+  import("../AppsDisplay/Education/TriangleSolver/TriangleSolver")
+);
+const CurrencyConverter = lazy(() =>
+  import("../AppsDisplay/Financial/CurrencyConverter/CurrencyConverter")
+);
+const EMICalculator = lazy(() =>
+  import("../AppsDisplay/Financial/EMICalculator/EMICalculator")
+);
+const ExpenseTracker = lazy(() =>
+  import("../AppsDisplay/Financial/ExpenseTracker/ExpenseTracker")
+);
+const InterestCalculator = lazy(() =>
+  import("../AppsDisplay/Financial/InterestCalculator/InterestCalculator")
+);
+const LoanRepaymentCalculator = lazy(() =>
+  import(
+    "../AppsDisplay/Financial/LoanRepaymentCalculator/LoanRepaymentCalculator"
+  )
+);
+const MortgageCalculator = lazy(() =>
+  import("../AppsDisplay/Financial/MortgageCalculator/MortgageCalculator")
+);
+const SavingsGoalTracker = lazy(() =>
+  import("../AppsDisplay/Financial/SavingsGoalTracker/SavingsGoalTracker")
+);
+const TipCalculator = lazy(() =>
+  import("../AppsDisplay/Financial/TipCalculator/TipCalculator")
+);
+const Path = lazy(() => import("../Path/Path"));
 
 const components = {
   BMICalculator,
@@ -65,10 +128,13 @@ const Page2 = ({ Data }) => {
     <div className={styles.page2}>
       {window.scrollTo(0, 0)}
       <Sidebar Data={Data} />
-
       <div className={styles.display_container}>
         <Path cardName={cardName}></Path>
-        {Component ? <Component /> : <div>Component not found</div>}
+
+        <Suspense fallback={<AppDisplayLoading />}>
+          {Component ? <Component /> : <div>Component not found</div>}
+        </Suspense>
+        {/* <AppDisplayLoading/> */}
       </div>
     </div>
   );

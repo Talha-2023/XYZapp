@@ -1,13 +1,14 @@
 import { Suspense, React, lazy } from "react";
 
 import TopContainer from "../TopContainer/TopContainer";
+import HomeLoading from "../LoadingSkeleton/HomeLoading/HomeLoading";
 const AppContainer = lazy(() => import("../Apps/AppContainer/AppContainer"));
 
 const Home = ({ Data }) => {
   return (
     <>
       <TopContainer />
-      <Suspense fallback={<h1>Loading</h1>}>
+      <Suspense fallback={<HomeLoading />}>
         {Data.map((Data, index) => {
           return (
             <AppContainer
