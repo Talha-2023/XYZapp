@@ -48,16 +48,20 @@
 }
 .active::after {
   content: "";
-  width: 40%;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2.5px solid rgb(255, 255, 255);
   position: absolute;
-  right: -72px;
-  box-shadow: 0px 0px 20px 3px white;
-  animation: line 3s ease-in-out infinite;
+  box-shadow: 0px 0px 20px 2px white;
+  border-radius: 50px;
+  animation: line 0.25s ease-in-out forwards;
 }
 
 @keyframes line {
-  50% {
-    box-shadow: 0px 0px 10px 2px white;
+  0% {
+    right: 0px;
+    width: 0%;
+  }
+  100% {
+    right: -65px;
+    width: 32%;
   }
 }

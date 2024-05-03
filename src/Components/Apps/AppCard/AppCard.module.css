@@ -9,7 +9,7 @@
   border-radius: 30px;
   box-shadow: 0px 0px 30px 1px#443cae72;
   font-weight: 900;
-  transition: 0.1s ease-out;
+  transition: 0.1s ease-in-out;
   cursor: pointer;
 
   &:hover {

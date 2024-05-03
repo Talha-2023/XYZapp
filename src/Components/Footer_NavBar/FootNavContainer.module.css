@@ -12,6 +12,7 @@
 }
 @keyframes shadow {
   50% {
-    box-shadow: 0px 0px 100px 300px #16274d;
+    box-shadow: 0px 0px 100px 300px #16274daf;
+    background-color: #16274daf;
   }
 }

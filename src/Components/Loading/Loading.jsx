@@ -5,6 +5,10 @@ const Loading = () => {
   return (
     <div className={styles.container}>
       <Logo />
+      <div className={styles.from}>
+        <p>From</p>
+        <h2>TALHA</h2>
+      </div>
     </div>
   );
 };
