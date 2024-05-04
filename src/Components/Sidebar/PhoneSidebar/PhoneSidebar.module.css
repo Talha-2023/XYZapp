@@ -29,14 +29,14 @@
 .iconSide {
   font-size: 35px;
   margin-left: -5px;
-  color: #433cae;
+  color: #0b6978;
 }
 .iconClose {
   position: absolute;
   color: white;
   right: 15vw;
   top: 50%;
-  font-size: 40px;
+  font-size: 50px;
   position: fixed;
 }
 @media screen and (max-width: 800px) {

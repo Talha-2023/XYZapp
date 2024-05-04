@@ -3,6 +3,7 @@ import DisToggle from "./Features/DisToggle";
 import TogglePlay from "./Features/TogglePlay";
 import SidebarCategories from "./Features/SidebarCategories";
 import Heading from "./Features/Heading";
+import SidebarPhone from "./Features/SidebarPhone";
 
 export const store = configureStore({
   reducer: {
@@ -10,5 +11,6 @@ export const store = configureStore({
     TogglePlay: TogglePlay,
     SidebarCategories: SidebarCategories,
     Heading: Heading,
+    SidebarPhone: SidebarPhone,
   },
 });

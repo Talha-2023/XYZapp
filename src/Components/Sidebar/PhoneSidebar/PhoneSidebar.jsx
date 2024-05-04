@@ -4,15 +4,20 @@ import Sidebar from "../../Sidebar/Sidebar";
 import styles from "./PhoneSidebar.module.css";
 import { FiAlignLeft } from "react-icons/fi";
 import { TbLayoutSidebarRightExpandFilled } from "react-icons/tb";
-
+import { ToggleSidebar } from "../../../Store/Features/SidebarPhone";
+import { useDispatch, useSelector } from "react-redux";
 const PhoneSidebar = () => {
-  const [sidebar, setSidebar] = useState(false);
+  // const [sidebar, setSidebar] = useState(false);
+  // const toggleSidebar = () => setSidebar(!sidebar);
 
-  const toggleSidebar = () => setSidebar(!sidebar);
-
+  const dispatch = useDispatch();
+  const sidebar = useSelector((state) => state.SidebarPhone.value);
   return (
     <>
-      <div className={styles.PhoneSide} onClick={toggleSidebar}>
+      <div
+        className={styles.PhoneSide}
+        onClick={() => dispatch(ToggleSidebar())}
+      >
         <FiAlignLeft className={styles.iconSide} />
       </div>
       {sidebar && (
@@ -21,7 +26,7 @@ const PhoneSidebar = () => {
             <Sidebar Data={Data} />
             <TbLayoutSidebarRightExpandFilled
               className={styles.iconClose}
-              onClick={toggleSidebar}
+              onClick={() => dispatch(ToggleSidebar())}
             />
           </div>
         </div>
