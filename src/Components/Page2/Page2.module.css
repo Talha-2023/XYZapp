@@ -10,4 +10,7 @@
   .display_container {
     width: 100%;
   }
+  .Sidebar_Hide {
+    display: none;
+  }
 }

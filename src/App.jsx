@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Data from "./Data/Data.jsx";
 import Loading from "./Components/Loading/Loading.jsx";
+import Sidebar from "./Components/Sidebar/Sidebar.jsx";
 const FooterComp = lazy(() =>
   import("./Components/Footer_NavBar/FooterComp.jsx")
 );

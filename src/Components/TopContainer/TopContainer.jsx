@@ -6,6 +6,7 @@ import { GrAd } from "react-icons/gr";
 import { GrBar } from "react-icons/gr";
 import { GrCalculator } from "react-icons/gr";
 import { GrCatalog } from "react-icons/gr";
+import DeviderLine from "../DeviderLine/DeviderLine";
 
 const TopContainer = () => {
   return (

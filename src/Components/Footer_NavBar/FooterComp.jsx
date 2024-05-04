@@ -7,7 +7,7 @@ const FooterComp = () => {
     <FootNavContainer>
       <div className={styles.footer}>
         <Logo />
-        <p>&copy; XYZapps.com</p>
+        <p>&copy; XYZapps.com By Talha | 2024 </p>
       </div>
     </FootNavContainer>
   );

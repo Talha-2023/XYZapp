@@ -127,7 +127,10 @@ const Page2 = ({ Data }) => {
   return (
     <div className={styles.page2}>
       {window.scrollTo(0, 0)}
-      <Sidebar Data={Data} />
+      <div className={styles.Sidebar_Hide}>
+        <Sidebar Data={Data} />
+      </div>
+
       <div className={styles.display_container}>
         <Path cardName={cardName}></Path>
 

@@ -1,0 +1,48 @@
+.sidebarContainer {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.773);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  overflow-x: hidden;
+}
+.sidebar {
+  background-color: rgba(0, 0, 0, 0.756);
+  margin-left: -42vw;
+  height: 130vh;
+  box-shadow: 0px 0px 5px 1px black;
+}
+.PhoneSide {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 0px 50px 50px 0px;
+  background-color: #fab440;
+  position: relative;
+  left: -10px;
+  cursor: pointer;
+}
+.iconSide {
+  font-size: 35px;
+  margin-left: -5px;
+  color: #433cae;
+}
+.iconClose {
+  position: absolute;
+  color: white;
+  right: 15vw;
+  top: 50%;
+  font-size: 40px;
+  position: fixed;
+}
+@media screen and (max-width: 800px) {
+  .PhoneSide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

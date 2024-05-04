@@ -5,6 +5,7 @@ import Categories1 from "./Categories1";
 import { Link } from "react-router-dom";
 
 const Sidebar = ({ Data }) => {
+  console.log("hi");
   return (
     <div className={styles.Sidebar_Container}>
       <Link to="/">

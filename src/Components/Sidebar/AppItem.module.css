@@ -54,6 +54,14 @@
   border-radius: 50px;
   animation: line 0.25s ease-in-out forwards;
 }
+@media screen and (max-width: 800px) {
+  .active::after {
+    content: "";
+    border: 0;
+    position: absolute;
+    box-shadow: none;
+  }
+}
 
 @keyframes line {
   0% {
