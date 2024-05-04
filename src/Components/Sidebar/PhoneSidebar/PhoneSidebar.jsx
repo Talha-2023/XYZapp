@@ -6,6 +6,18 @@ import { FiAlignLeft } from "react-icons/fi";
 import { TbLayoutSidebarRightExpandFilled } from "react-icons/tb";
 import { ToggleSidebar } from "../../../Store/Features/SidebarPhone";
 import { useDispatch, useSelector } from "react-redux";
+import { AnimatePresence, motion } from "framer-motion";
+const containerVariants = {
+  exit: {
+    opacity: 0,
+    x: "-100%",
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      damping: 20,
+    },
+  },
+};
 const PhoneSidebar = () => {
   const dispatch = useDispatch();
   const sidebar = useSelector((state) => state.SidebarPhone.value);
@@ -17,17 +29,24 @@ const PhoneSidebar = () => {
       >
         <FiAlignLeft className={styles.iconSide} />
       </div>
-      {sidebar && (
-        <div className={styles.sidebarContainer}>
-          <div className={styles.sidebar}>
-            <Sidebar Data={Data} />
-            <TbLayoutSidebarRightExpandFilled
-              className={styles.iconClose}
-              onClick={() => dispatch(ToggleSidebar())}
-            />
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {sidebar && (
+          <motion.div
+            className={styles.sidebarContainer}
+            variants={containerVariants}
+            initial="initial"
+            exit="exit"
+          >
+            <div className={styles.sidebar}>
+              <Sidebar Data={Data} />
+              <TbLayoutSidebarRightExpandFilled
+                className={styles.iconClose}
+                onClick={() => dispatch(ToggleSidebar())}
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

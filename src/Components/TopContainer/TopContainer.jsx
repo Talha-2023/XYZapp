@@ -1,12 +1,20 @@
 import styles from "./TopContainer.module.css";
-import { GrAction } from "react-icons/gr";
-import { GrAchievement } from "react-icons/gr";
-import { GrActions } from "react-icons/gr";
-import { GrAd } from "react-icons/gr";
-import { GrBar } from "react-icons/gr";
-import { GrCalculator } from "react-icons/gr";
-import { GrCatalog } from "react-icons/gr";
-import DeviderLine from "../DeviderLine/DeviderLine";
+import {
+  GrAction,
+  GrAchievement,
+  GrActions,
+  GrAd,
+  GrBar,
+  GrCalculator,
+  GrCatalog,
+  GrArticle,
+  GrBasket,
+  GrBusinessService,
+  GrCli,
+  GrClipboard,
+  GrCodeSandbox,
+  GrDatabase,
+} from "react-icons/gr";
 
 const TopContainer = () => {
   return (
@@ -21,26 +29,23 @@ const TopContainer = () => {
           <p>Calculate, Convert, Compare..</p>
         </div>
         <div className={styles.icon_container}>
-          <div className={styles.icon}>
-            <GrAction />
+          <div className={styles.icon_scroll_Box1}>
+            <GrAction className={styles.icon} />
+            <GrAchievement className={styles.icon} />
+            <GrActions className={styles.icon} />
+            <GrAd className={styles.icon} />
+            <GrBar className={styles.icon} />
+            <GrCalculator className={styles.icon} />
+            <GrCatalog className={styles.icon} />
           </div>
-          <div className={styles.icon}>
-            <GrAchievement />
-          </div>
-          <div className={styles.icon}>
-            <GrActions />
-          </div>
-          <div className={styles.icon}>
-            <GrAd />
-          </div>
-          <div className={styles.icon}>
-            <GrBar />
-          </div>
-          <div className={styles.icon}>
-            <GrCalculator />
-          </div>
-          <div className={styles.icon}>
-            <GrCatalog />
+          <div className={styles.icon_scroll_Box1}>
+            <GrArticle className={styles.icon} />
+            <GrBasket className={styles.icon} />
+            <GrBusinessService className={styles.icon} />
+            <GrCli className={styles.icon} />
+            <GrClipboard className={styles.icon} />
+            <GrCodeSandbox className={styles.icon} />
+            <GrDatabase className={styles.icon} />
           </div>
         </div>
       </div>

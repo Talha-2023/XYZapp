@@ -42,17 +42,33 @@
   margin-bottom: 5px;
 }
 .icon_container {
+  overflow: hidden;
+  margin-left: 10px;
+  width: 220px;
+  display: flex;
+}
+.icon_scroll_Box1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  width: fit-content;
   margin-left: 1%;
+  overflow: hidden;
+  flex-shrink: 0;
+  animation: scroll 15s linear infinite;
 }
+
 .icon_container .icon {
   color: white;
   font-size: 20px;
-  margin-left: 8px;
+  margin-left: 10px;
+}
+@keyframes scroll {
+  0% {
+    transform: translate();
+  }
+  100% {
+    transform: translatex(-100%);
+  }
 }
 @media screen and (max-width: 800px) {
   .container {

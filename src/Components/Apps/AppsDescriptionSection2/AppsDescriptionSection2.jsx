@@ -5,6 +5,18 @@ import { IoIosSettings } from "react-icons/io";
 
 import { HandleTogglePlay } from "../../../Store/Features/TogglePlay";
 import { useDispatch, useSelector } from "react-redux";
+import { delay, motion } from "framer-motion";
+
+const containerVariants = {
+  initial: { opacity: 0, x: "-100px" },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.4,
+    },
+  },
+};
 
 const AppsDescriptionSection2 = ({ discription, audio }) => {
   const dispatch = useDispatch();
@@ -13,7 +25,12 @@ const AppsDescriptionSection2 = ({ discription, audio }) => {
   const iconClass = Audio ? styles.icon_active : styles.icon_inactive;
 
   return (
-    <div className={styles.app_discription}>
+    <motion.div
+      variants={containerVariants}
+      initial="initial"
+      animate="animate"
+      className={styles.app_discription}
+    >
       <div className={styles.img_container}>
         <img src={`/${audio}.png`} alt="image" />
         <div className={styles.gif_shadow}></div>
@@ -53,7 +70,7 @@ const AppsDescriptionSection2 = ({ discription, audio }) => {
         <IoIosSettings className={styles.rotate} />
         .... <IoIosSettings className={styles.rotate} />.
       </p>
-    </div>
+    </motion.div>
   );
 };
 
