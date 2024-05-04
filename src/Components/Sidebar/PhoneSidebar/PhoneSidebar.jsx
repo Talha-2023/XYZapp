@@ -7,9 +7,6 @@ import { TbLayoutSidebarRightExpandFilled } from "react-icons/tb";
 import { ToggleSidebar } from "../../../Store/Features/SidebarPhone";
 import { useDispatch, useSelector } from "react-redux";
 const PhoneSidebar = () => {
-  // const [sidebar, setSidebar] = useState(false);
-  // const toggleSidebar = () => setSidebar(!sidebar);
-
   const dispatch = useDispatch();
   const sidebar = useSelector((state) => state.SidebarPhone.value);
   return (

@@ -1,9 +1,9 @@
 import styles from "./Page2.module.css";
 import { useParams } from "react-router-dom";
-
 import Sidebar from "../Sidebar/Sidebar";
 import { Suspense, lazy } from "react";
 import AppDisplayLoading from "../Loading/AppDisplayLoading";
+import { motion } from "framer-motion";
 
 const BMICalculator = lazy(() =>
   import("../AppsDisplay/BodyAndFitness/BMICalculator/BMICalculator")
@@ -131,14 +131,19 @@ const Page2 = ({ Data }) => {
         <Sidebar Data={Data} />
       </div>
 
-      <div className={styles.display_container}>
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: 100 }}
+        className={styles.display_container}
+      >
         <Path cardName={cardName}></Path>
 
         <Suspense fallback={<AppDisplayLoading />}>
           {Component ? <Component /> : <div>Component not found</div>}
         </Suspense>
         {/* <AppDisplayLoading/> */}
-      </div>
+      </motion.div>
     </div>
   );
 };
