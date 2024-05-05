@@ -1,0 +1,40 @@
+.data {
+  font-size: 50px;
+  font-family: "Megrim", system-ui;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 4px rgb(255, 255, 255);
+  color: white;
+  position: relative;
+}
+.para_container::before {
+  content: "Web Apps By Talha";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+  filter: drop-shadow(0 0 25px orange);
+
+  color: orange;
+  border-right: 3px solid orange;
+  transition: 1s ease-in-out;
+  -webkit-text-stroke: 4px orange;
+  animation: color 6s linear infinite;
+}
+
+@media screen and (max-width: 387px) {
+  .data {
+    font-size: 40px;
+  }
+}
+@keyframes color {
+  0%,
+  40%,
+  100% {
+    width: 0%;
+  }
+
+  70%,
+  90% {
+    width: 100%;
+  }
+}

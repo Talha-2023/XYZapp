@@ -7,7 +7,12 @@ const AppContainer = lazy(() => import("../Apps/AppContainer/AppContainer"));
 const Home = ({ Data }) => {
   return (
     <>
-      <TopContainer />
+      <TopContainer
+        text="Web Apps By Talha"
+        characters="█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░"
+        speed={120}
+        revealDuration={4000}
+      />
       <Suspense fallback={<HomeLoading />}>
         {Data.map((Data, index) => {
           return (

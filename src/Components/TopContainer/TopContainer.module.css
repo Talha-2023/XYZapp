@@ -13,13 +13,6 @@
   align-items: center;
 }
 
-.creator_container p {
-  font-family: "Megrim", system-ui;
-  font-size: 50px;
-  color: white;
-  -webkit-text-stroke: 4px white;
-  letter-spacing: 1px;
-}
 .talha {
   color: orange;
   -webkit-text-stroke: 4px orange;
@@ -39,8 +32,35 @@
   font-size: 18px;
   font-family: "Metrophobic", sans-serif;
   color: white;
+
   margin-bottom: 5px;
+  position: relative;
 }
+.para_container p::before {
+  content: "Calculate, Convert, Compare..";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+  color: orange;
+  border-right: 3px solid orange;
+  transition: 1s ease-in-out;
+  filter: drop-shadow(0 0 5px rgba(255, 166, 0, 0.645));
+  animation: color 5s ease-in-out infinite;
+}
+@keyframes color {
+  0%,
+  40%,
+  100% {
+    width: 0%;
+  }
+
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
 .icon_container {
   overflow: hidden;
   margin-left: 10px;

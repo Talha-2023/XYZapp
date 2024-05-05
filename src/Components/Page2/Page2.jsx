@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import { Suspense, lazy } from "react";
 import AppDisplayLoading from "../Loading/AppDisplayLoading";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const BMICalculator = lazy(() =>
   import("../AppsDisplay/BodyAndFitness/BMICalculator/BMICalculator")
@@ -120,6 +120,14 @@ const components = {
   TipCalculator,
 };
 
+const containerVariants = {
+  initial: { opacity: 1, scale: 0 },
+  animate: {
+    opacity: 1,
+    scale: 1,
+  },
+};
+
 const Page2 = ({ Data }) => {
   let { cardName } = useParams();
 
@@ -132,15 +140,17 @@ const Page2 = ({ Data }) => {
       </div>
 
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: 100 }}
+        variants={containerVariants}
+        initial="initial"
+        animate="animate"
         className={styles.display_container}
       >
         <Path cardName={cardName}></Path>
 
         <Suspense fallback={<AppDisplayLoading />}>
-          {Component ? <Component /> : <div>Component not found</div>}
+          <div>
+            {Component ? <Component /> : <div>Component not found</div>}
+          </div>
         </Suspense>
         {/* <AppDisplayLoading/> */}
       </motion.div>
