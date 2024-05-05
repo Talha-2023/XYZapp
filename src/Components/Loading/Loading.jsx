@@ -4,7 +4,9 @@ import Logo from "../Logo/Logo";
 const Loading = () => {
   return (
     <div className={styles.container}>
-      <Logo />
+      <div className={styles.logo}>
+        <Logo />
+      </div>
       <div className={styles.from}>
         <p>From</p>
         <h2>TALHA</h2>

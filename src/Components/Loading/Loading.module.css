@@ -6,15 +6,17 @@
   z-index: 55555;
   background-color: #16274d;
   display: flex;
-  justify-content: center;
   align-items: center;
   position: fixed;
   flex-direction: column;
 }
+.logo {
+  margin-top: 40vh;
+}
 .from {
   text-align: center;
   position: absolute;
-  bottom: 50px;
+  bottom: 150px;
 }
 .from p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

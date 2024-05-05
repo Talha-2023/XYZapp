@@ -1,9 +1,10 @@
 import styles from "./AppDisplaySection1.module.css";
 import AppCard from "../AppCard/AppCard";
+
 import AppDisplayPhone from "./AppDisplayPhone/AppDisplayPhone";
 import { useDispatch } from "react-redux";
 import { HomeHeading } from "../../../Store/Features/SidebarCategories";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const containerVariants = {
   initial: { opacity: 1, scale: 0 },

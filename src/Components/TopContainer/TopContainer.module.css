@@ -37,7 +37,7 @@
   position: relative;
 }
 .para_container p::before {
-  content: "Calculate, Convert, Compare..";
+  content: "Calculate_Convert_Compare..";
   position: absolute;
   width: 0%;
   height: 100%;

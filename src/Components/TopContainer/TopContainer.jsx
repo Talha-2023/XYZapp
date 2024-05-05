@@ -29,7 +29,7 @@ const TopContainer = () => {
           text="Web Apps By Talha"
           text2=" Talha"
           characters="0805805805805805"
-          speed={100}
+          speed={50}
           revealDuration={2000}
         />
       </div>
@@ -40,7 +40,7 @@ const TopContainer = () => {
         className={styles.bottom_container}
       >
         <div className={styles.para_container}>
-          <p>Calculate, Convert, Compare..</p>
+          <p>Calculate_Convert_Compare..</p>
         </div>
         <div className={styles.icon_container}>
           <div className={styles.icon_scroll_Box1}>

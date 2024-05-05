@@ -230,7 +230,7 @@ const Data = [
       },
       {
         icon: <TbChartAreaLine />,
-        app_name: "Area and Perimeter Calculator  ",
+        app_name: "Area And Perimeter Calculator  ",
       },
       {
         icon: <TbVectorTriangle />,
