@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Sidebar = ({ Data }) => {
-  console.log("hi");
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
