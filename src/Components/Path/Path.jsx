@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom";
 import styles from "./Path.module.css";
+import React, { Suspense, lazy } from "react";
+import { useSelector } from "react-redux";
 import { MdOutlineSpaceDashboard } from "react-icons/md";
-import PhoneSidebar from "../Sidebar/PhoneSidebar/PhoneSidebar";
+const PhoneSidebar = lazy(() => import("../Sidebar/PhoneSidebar/PhoneSidebar"));
 
-import React from "react";
+const Path = () => {
+  const app = useSelector((state) => state.AppName.value);
+  const appName = app.app_name;
 
-const Path = ({ cardName }) => {
   return (
     <div className={styles.PathContainer}>
-      <PhoneSidebar />
+      <Suspense fallback={<div>Loading...</div>}>
+        <PhoneSidebar />
+      </Suspense>
       <div className={styles.path}>
         <Link to="/" className="link">
           <p className={styles.home}>
@@ -17,7 +22,7 @@ const Path = ({ cardName }) => {
         </Link>
 
         <div className={styles.currentPath}>
-          <p> /&nbsp;&nbsp;{cardName}</p>
+          <p> /&nbsp;&nbsp;{appName}</p>
         </div>
       </div>
     </div>

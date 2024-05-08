@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { Suspense, lazy } from "react";
 import Data from "../../../Data/Data";
-import Sidebar from "../../Sidebar/Sidebar";
 import styles from "./PhoneSidebar.module.css";
 import { FiAlignLeft } from "react-icons/fi";
 import { TbLayoutSidebarRightExpandFilled } from "react-icons/tb";
 import { ToggleSidebar } from "../../../Store/Features/SidebarPhone";
 import { useDispatch, useSelector } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
+const Sidebar = lazy(() => import("../../Sidebar/Sidebar"));
+
 const containerVariants = {
   exit: {
     opacity: 0,
@@ -29,24 +30,26 @@ const PhoneSidebar = () => {
       >
         <FiAlignLeft className={styles.iconSide} />
       </div>
-      <AnimatePresence>
-        {sidebar && (
-          <motion.div
-            className={styles.sidebarContainer}
-            variants={containerVariants}
-            initial="initial"
-            exit="exit"
-          >
-            <div className={styles.sidebar}>
-              <Sidebar Data={Data} />
-              <TbLayoutSidebarRightExpandFilled
-                className={styles.iconClose}
-                onClick={() => dispatch(ToggleSidebar())}
-              />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <Suspense fallback={<div>Loading...</div>}>
+        <AnimatePresence>
+          {sidebar && (
+            <motion.div
+              className={styles.sidebarContainer}
+              variants={containerVariants}
+              initial="initial"
+              exit="exit"
+            >
+              <div className={styles.sidebar}>
+                <Sidebar Data={Data} />
+                <TbLayoutSidebarRightExpandFilled
+                  className={styles.iconClose}
+                  onClick={() => dispatch(ToggleSidebar())}
+                />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </Suspense>
     </>
   );
 };

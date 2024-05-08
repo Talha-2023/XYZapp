@@ -4,6 +4,7 @@ import AppCard from "../AppCard/AppCard";
 import AppDisplayPhone from "./AppDisplayPhone/AppDisplayPhone";
 import { useDispatch } from "react-redux";
 import { HomeHeading } from "../../../Store/Features/SidebarCategories";
+
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -55,9 +56,7 @@ const AppDisplaySection1 = ({ heading, discription, apps, audio }) => {
         className={styles.apps_cards}
       >
         {apps.map((app, index) => {
-          return (
-            <AppCard key={index} appicon={app.icon} appname={app.app_name} />
-          );
+          return <AppCard key={index} app={app} />;
         })}
       </motion.div>
     </motion.div>

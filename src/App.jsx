@@ -6,6 +6,7 @@ import Data from "./Data/Data.jsx";
 
 import Loading from "./Components/Loading/Loading.jsx";
 import TopText from "./Components/TopContainer/TopText.jsx";
+import HomeLoading from "./Components/LoadingSkeleton/HomeLoading/HomeLoading.jsx";
 const FooterComp = lazy(() =>
   import("./Components/Footer_NavBar/FooterComp.jsx")
 );

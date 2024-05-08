@@ -1,10 +1,12 @@
 import styles from "./AppList.module.css";
 import AppItem from "./AppItem";
+import { HandleAppName } from "../../Store/Features/AppName";
+import { useDispatch } from "react-redux";
 
 const AppList = ({ App }) => {
-  return App.map((app) => (
-    <AppItem name={app.app_name} icon={app.icon} key={app.app_name}></AppItem>
-  ));
+  const dispatch = useDispatch();
+
+  return App.map((app) => <AppItem app={app} key={app.app_name}></AppItem>);
 };
 
 export default AppList;

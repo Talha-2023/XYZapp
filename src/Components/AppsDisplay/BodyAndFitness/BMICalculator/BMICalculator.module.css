@@ -1,0 +1,211 @@
+.mainContainer {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.semiContainer {
+  height: fit-content;
+  border-radius: 20px;
+  /* background-color: #e7eef6; */
+  background-color: #fab440;
+  box-shadow: 0px 0px 10px 0px #443cae7a;
+  /* padding: 40px 20px 0px 20px; */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Hide the default spinner */
+  margin: 0; /* Optional - if you want to remove the margin */
+}
+.mainContainer p {
+  font-family: "Metrophobic", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+input {
+  overflow-y: hidden;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 2px solid #138899;
+  font-size: 20px;
+  padding: 5px;
+  width: 80px;
+  text-align: center;
+}
+.mainContainer input::placeholder {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.351);
+  font-weight: 500;
+}
+input[type="number"]:focus::placeholder {
+  color: transparent;
+}
+.height_box {
+  border-radius: 10px;
+  background-color: white;
+
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.189);
+  padding: 10px 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 40px 20px 0px 20px;
+}
+.weightAndAge_box {
+  border-radius: 10px;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  margin: 0px 20px;
+}
+.weight,
+.age {
+  background-color: white;
+  height: 100%;
+  width: 50%;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.189);
+  padding: 10px 0px;
+}
+.gender_box {
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.189);
+  padding: 10px 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0px 20px;
+}
+.gender_box input {
+  padding: 0px;
+  width: auto;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.male {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.female {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button_box {
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.189);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 0px 20px;
+}
+.reset {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: rgb(217, 217, 217);
+  cursor: pointer;
+}
+.sumbit {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #433cae;
+  cursor: pointer;
+}
+.sumbit p {
+  color: white;
+}
+.bmi_conatiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bmi_conatiner h2 {
+  padding: 10px 0px 10px 20px;
+  font-family: "Lilita One", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bmi_conatiner p {
+  color: white;
+}
+.bmi_conatiner h3 {
+  font-family: "Lilita One", sans-serif;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  font-size: 25px;
+}
+.bmi_box {
+  display: flex;
+  background-color: white;
+  border-radius: 30px;
+}
+.bmi {
+  margin-left: 10px;
+  font-weight: 0;
+  background-color: #138899;
+  padding: 15px 20px;
+  height: 100%;
+  border-radius: 20px 30px 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.result {
+  padding: 20px 10px;
+  width: 100%;
+  border-radius: 50% 50% 10px 10px;
+  background-color: rgb(89, 153, 209);
+}
+@media screen and (max-width: 800px) {
+  .mainContainer {
+    margin-top: -25px;
+  }
+  .semiContainer {
+    width: 105%;
+  }
+}
+@media screen and (max-width: 374px) {
+  .semiContainer {
+    width: 115%;
+  }
+  .mainContainer input::placeholder {
+    font-size: 14px;
+  }
+  .weightAndAge_box input {
+    width: 70px;
+  }
+}

@@ -145,7 +145,7 @@ const Page2 = ({ Data }) => {
         animate="animate"
         className={styles.display_container}
       >
-        <Path cardName={cardName}></Path>
+        <Path></Path>
 
         <Suspense fallback={<AppDisplayLoading />}>
           <div>

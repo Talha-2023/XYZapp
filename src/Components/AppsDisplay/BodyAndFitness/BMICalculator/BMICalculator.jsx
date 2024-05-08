@@ -1,12 +1,13 @@
 import { useState } from "react";
 import DisplayContainer from "../../DisplayContainer";
+import styles from "./BMICalculator.module.css";
 const BMICalculator = () => {
   const [weight, setWeight] = useState("");
   const [feet, setFeet] = useState("");
-  const [inches, setInches] = useState("0");
+  const [inches, setInches] = useState("");
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("male"); // Default to male
-  const [bmi, setBMI] = useState(null);
+  const [bmi, setBMI] = useState("00:00");
   const [error, setError] = useState("");
 
   const calculateBMI = () => {
@@ -35,94 +36,109 @@ const BMICalculator = () => {
     setFeet("");
     setInches("");
     setAge("");
-    setGender("");
-    setBMI("");
+    setGender("male");
+    setBMI("00:00");
   };
 
   return (
     <DisplayContainer>
-      <div>
-        <h2>BMI Calculator</h2>
-        <div>
-          <label>
-            Weight (kg):
-            <input
-              type="number"
-              value={weight}
-              onChange={(e) => setWeight(e.target.value)}
-              placeholder="Enter weight in kilograms"
-            />
-          </label>
-        </div>
-        <div>
-          <label>
-            Height:
+      <div className={styles.mainContainer}>
+        <div className={styles.semiContainer}>
+          <div className={styles.height_box}>
+            <p>Height</p>
             <input
               type="number"
               value={feet}
               onChange={(e) => setFeet(e.target.value)}
               placeholder="Feet"
+              className={styles.feet}
             />
             <input
               type="number"
               value={inches}
               onChange={(e) => setInches(e.target.value)}
               placeholder="Inches"
+              className={styles.inches}
             />
-          </label>
-        </div>
-        <div>
-          <label>
-            Age:
-            <input
-              type="number"
-              value={age}
-              onChange={(e) => setAge(e.target.value)}
-              placeholder="Enter age"
-            />
-          </label>
-        </div>
-        <div>
-          <label>
-            Gender:
-            <input
-              type="radio"
-              value="male"
-              checked={gender === "male"}
-              onChange={() => setGender("male")}
-            />{" "}
-            Male
-            <input
-              type="radio"
-              value="female"
-              checked={gender === "female"}
-              onChange={() => setGender("female")}
-            />{" "}
-            Female
-          </label>
-        </div>
-        <br></br>
-        <button onClick={calculateBMI}>Calculate BMI</button>
-        <button onClick={reset}>Reset</button>
-
-        {error && <p style={{ color: "red" }}>{error}</p>}
-        {bmi && (
-          <div>
-            <h3>Your BMI: {bmi}</h3>
-            <p>
-              Interpretation:{" "}
-              {bmi < 18.5
-                ? "Underweight"
-                : bmi < 24.9
-                ? "Normal"
-                : bmi < 29.9
-                ? "Overweight"
-                : "Obese"}
-            </p>
           </div>
-        )}
-      </div>{" "}
-      <br /> <br />
+          <div className={styles.weightAndAge_box}>
+            <div className={styles.weight}>
+              <p> Weight</p>
+              <input
+                type="number"
+                value={weight}
+                onChange={(e) => setWeight(e.target.value)}
+                placeholder="In KG"
+              />
+            </div>
+            <div className={styles.age}>
+              <p> Age</p>
+              <input
+                type="number"
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
+                placeholder="Enter age"
+              />
+            </div>
+          </div>
+          <div className={styles.gender_box}>
+            <div className={styles.male}>
+              <input
+                type="radio"
+                value="male"
+                checked={gender === "male"}
+                onChange={() => setGender("male")}
+              />
+              <p>Male</p>
+            </div>
+            <div className={styles.female}>
+              <input
+                type="radio"
+                value="female"
+                checked={gender === "female"}
+                onChange={() => setGender("female")}
+              />
+              <p>Female</p>
+            </div>
+          </div>
+          <div className={styles.button_box}>
+            <div onClick={reset} className={styles.reset}>
+              <p>Reset</p>
+            </div>
+
+            <div onClick={calculateBMI} className={styles.sumbit}>
+              <p> Calculate BMI</p>
+            </div>
+          </div>
+          {error && <p style={{ color: "red" }}>{error}</p>}
+          <div className={styles.result}>
+            <div className={styles.bmi_conatiner}>
+              <h3>Your BMI: </h3>
+              <div className={styles.bmi_box}>
+                <div>
+                  <h2>{bmi}</h2>
+                </div>
+                <div className={styles.bmi}>
+                  <p>
+                    {bmi == "00:00"
+                      ? "Interpretation"
+                      : bmi < 18.5
+                      ? "Underweight"
+                      : bmi < 24.9
+                      ? "Normal Weight"
+                      : bmi < 29.9
+                      ? "Overweight"
+                      : bmi < 39.9
+                      ? "Obese"
+                      : "Extreme Obese"}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* //------------------------ */}
       <img src="/bmi.jpeg" alt="" style={{ width: "100%" }} />
       <h1>What is BMI</h1>
       <p>
