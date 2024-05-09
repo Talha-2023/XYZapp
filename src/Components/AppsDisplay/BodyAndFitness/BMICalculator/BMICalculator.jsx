@@ -1,7 +1,6 @@
 import { useState } from "react";
 import DisplayContainer from "../../DisplayContainer";
 import styles from "./BMICalculator.module.css";
-import { motion, AnimatePresence } from "framer-motion";
 const BMICalculator = () => {
   const [weight, setWeight] = useState("");
   const [feet, setFeet] = useState("");
@@ -113,40 +112,32 @@ const BMICalculator = () => {
             </div>
           </div>
           <center>{error && <p className={styles.error}>{error}</p>}</center>
-          <AnimatePresence>
-            {bmi == "00:00" ? null : (
-              <motion.div
-                initial={{ y: "-50px", opacity: "0" }}
-                animate={{ y: 0, opacity: "1" }}
-                exit={{ y: "-50px", opacity: "0" }}
-                className={styles.result}
-              >
-                <div className={styles.bmi_conatiner}>
-                  <h3>Your BMI: </h3>
-                  <div className={styles.bmi_box}>
-                    <div>
-                      <h2>{bmi}</h2>
-                    </div>
-                    <div className={styles.bmi}>
-                      <p>
-                        {bmi == "00:00"
-                          ? "Interpretation"
-                          : bmi < 18.5
-                          ? "Underweight"
-                          : bmi < 24.9
-                          ? "Normal Weight"
-                          : bmi < 29.9
-                          ? "Overweight"
-                          : bmi < 39.9
-                          ? "Obese"
-                          : "Extreme Obese"}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+        </div>
+
+        <div className={styles.result}>
+          <div className={styles.bmi_conatiner}>
+            <h3>Your BMI: </h3>
+            <div className={styles.bmi_box}>
+              <div>
+                <h2>{bmi}</h2>
+              </div>
+              <div className={styles.bmi}>
+                <p>
+                  {bmi == "00:00"
+                    ? "Interpretation"
+                    : bmi < 18.5
+                    ? "Underweight"
+                    : bmi < 24.9
+                    ? "Normal Weight"
+                    : bmi < 29.9
+                    ? "Overweight"
+                    : bmi < 39.9
+                    ? "Obese"
+                    : "Extreme Obese"}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       {/* //------------------------ */}
@@ -163,18 +154,19 @@ const BMICalculator = () => {
           is that it doesn't account for the distribution of body fat or
           distinguish between fat mass and muscle mass. This means that
           individuals with high muscle mass, such as athletes, may have a high
-          BMI despite being healthy and fit. Additionally, BMI doesn't consider
-          other important factors like age, sex, or ethnicity, which can
-          influence body composition and health risks. Despite these
-          limitations, BMI remains widely used in healthcare settings and public
-          health initiatives as a quick and accessible way to assess weight
-          status and identify potential health risks associated with excess body
-          weight. However, it's important to interpret BMI alongside other
-          health indicators and consider individual circumstances for a
-          comprehensive understanding of an individual's health status.
+          BMI despite being healthy and fit.
+          <p>BMI = weight (kg) / (height (m) * height (m))</p>
+          <img src="/bmi.jpeg" alt="" style={{ width: "100%" }} />
+          Additionally, BMI doesn't consider other important factors like age,
+          sex, or ethnicity, which can influence body composition and health
+          risks. Despite these limitations, BMI remains widely used in
+          healthcare settings and public health initiatives as a quick and
+          accessible way to assess weight status and identify potential health
+          risks associated with excess body weight. However, it's important to
+          interpret BMI alongside other health indicators and consider
+          individual circumstances for a comprehensive understanding of an
+          individual's health status.
         </p>
-        <p>BMI = weight (kg) / (height (m) * height (m))</p>
-        <img src="/bmi.jpeg" alt="" style={{ width: "100%" }} />
       </div>
     </DisplayContainer>
   );
