@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+  transition: 0.9s;
 }
 
 .semiContainer {
@@ -119,10 +120,10 @@ input[type="number"]:focus::placeholder {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  margin: 0px 20px;
+  margin: 0px 20px 20px 20px;
 }
 .reset {
-  width: 30%;
+  width: 25%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -130,9 +131,13 @@ input[type="number"]:focus::placeholder {
   border-radius: 10px;
   background-color: rgb(217, 217, 217);
   cursor: pointer;
+  &:hover {
+    background-color: rgb(182, 182, 182);
+  }
 }
+
 .sumbit {
-  width: 70%;
+  width: 75%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -140,6 +145,10 @@ input[type="number"]:focus::placeholder {
   border-radius: 10px;
   background-color: #433cae;
   cursor: pointer;
+
+  &:hover {
+    background-color: #6056e3;
+  }
 }
 .sumbit p {
   color: white;
@@ -164,7 +173,7 @@ input[type="number"]:focus::placeholder {
 }
 .bmi_conatiner h3 {
   font-family: "Lilita One", sans-serif;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   letter-spacing: 1px;
   font-size: 25px;
 }
@@ -172,6 +181,9 @@ input[type="number"]:focus::placeholder {
   display: flex;
   background-color: white;
   border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .bmi {
   margin-left: 10px;
@@ -187,8 +199,40 @@ input[type="number"]:focus::placeholder {
 .result {
   padding: 20px 10px;
   width: 100%;
-  border-radius: 50% 50% 10px 10px;
-  background-color: rgb(89, 153, 209);
+  border-radius: 30px 30px 10px 10px;
+  background-color: #ffdda6;
+  border-top: 3px dashed black;
+}
+.error {
+  background-color: red;
+  padding: 10px 20px;
+  color: white;
+  width: fit-content;
+  border-radius: 20px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+img {
+  border-radius: 20px;
+  border: 3px dashed black;
+  margin-top: 10px;
+}
+.what {
+  width: 90%;
+  height: fit-content;
+  padding: 20px 10px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px auto;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.487);
+}
+.what h1 {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 0;
+  margin-bottom: 10px;
+}
+.what p {
+  font-family: "Metrophobic", sans-serif;
 }
 @media screen and (max-width: 800px) {
   .mainContainer {
