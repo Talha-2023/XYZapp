@@ -2,11 +2,7 @@ import React from "react";
 import DisplayContainer from "../../DisplayContainer";
 
 const SavingsGoalTracker = () => {
-  return (
-    <DisplayContainer>
-      <div>SavingsGoalTracker</div>
-    </DisplayContainer>
-  );
+  return <DisplayContainer></DisplayContainer>;
 };
 
 export default SavingsGoalTracker;

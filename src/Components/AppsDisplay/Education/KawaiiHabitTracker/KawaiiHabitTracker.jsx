@@ -2,11 +2,7 @@ import React from "react";
 import DisplayContainer from "../../DisplayContainer";
 
 const KawaiiHabitTracker = () => {
-  return (
-    <DisplayContainer>
-      <div>KawaiiHabitTracker</div>
-    </DisplayContainer>
-  );
+  return <DisplayContainer></DisplayContainer>;
 };
 
 export default KawaiiHabitTracker;

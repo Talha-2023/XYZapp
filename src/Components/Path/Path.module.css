@@ -1,11 +1,15 @@
 .path {
   width: fit-content;
+  height: 30px;
   display: flex;
+  align-items: center;
+  overflow: hidden;
   padding: 2px 20px;
   border-radius: 50px;
   background-color: #433cae;
   margin: 0px 30px 10px 30px;
   gap: 10px;
+  z-index: 9999;
 }
 
 .home {
@@ -27,11 +31,16 @@
     padding: 1px 20px;
   }
 }
+.currentPath {
+}
 .currentPath p {
   color: white;
   font-family: "Yusei Magic", sans-serif;
   letter-spacing: 1px;
   font-size: 13px;
+  text-overflow: ellipsis;
+  overflow: hidden; /* Hides the overflow content */
+  white-space: nowrap; /* Prevents the text from wrapping */
 }
 .icon {
   font-size: 16px;

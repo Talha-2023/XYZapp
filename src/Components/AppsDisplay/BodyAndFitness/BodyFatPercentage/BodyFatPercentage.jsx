@@ -1,11 +1,7 @@
 import DisplayContainer from "../../DisplayContainer";
 
 const BodyFatPercentage = () => {
-  return (
-    <DisplayContainer>
-      <div>BodyFatPercentage</div>
-    </DisplayContainer>
-  );
+  return <DisplayContainer></DisplayContainer>;
 };
 
 export default BodyFatPercentage;

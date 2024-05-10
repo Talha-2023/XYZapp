@@ -2,11 +2,7 @@ import React from "react";
 import DisplayContainer from "../../DisplayContainer";
 
 const GradeConverter = () => {
-  return (
-    <DisplayContainer>
-      <div>GradeConverter</div>
-    </DisplayContainer>
-  );
+  return <DisplayContainer></DisplayContainer>;
 };
 
 export default GradeConverter;

@@ -2,11 +2,7 @@ import React from "react";
 import DisplayContainer from "../../DisplayContainer";
 
 const NutritionalValueCalculator = () => {
-  return (
-    <DisplayContainer>
-      <div>NutritionalValueCalculator</div>
-    </DisplayContainer>
-  );
+  return <DisplayContainer></DisplayContainer>;
 };
 
 export default NutritionalValueCalculator;

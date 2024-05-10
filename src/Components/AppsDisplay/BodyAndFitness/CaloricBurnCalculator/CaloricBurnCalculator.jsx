@@ -2,11 +2,7 @@ import React from "react";
 import DisplayContainer from "../../DisplayContainer";
 
 const CaloricBurnCalculator = () => {
-  return (
-    <DisplayContainer>
-      <div>CaloricBurnCalculator</div>
-    </DisplayContainer>
-  );
+  return <DisplayContainer></DisplayContainer>;
 };
 
 export default CaloricBurnCalculator;

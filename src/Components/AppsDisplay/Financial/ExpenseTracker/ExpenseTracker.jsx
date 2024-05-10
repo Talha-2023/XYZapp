@@ -2,11 +2,7 @@ import React from "react";
 import DisplayContainer from "../../DisplayContainer";
 
 const ExpenseTracker = () => {
-  return (
-    <DisplayContainer>
-      <div>ExpenseTracker</div>
-    </DisplayContainer>
-  );
+  return <DisplayContainer></DisplayContainer>;
 };
 
 export default ExpenseTracker;

@@ -2,11 +2,7 @@ import React from "react";
 import DisplayContainer from "../../DisplayContainer";
 
 const SleepTracker = () => {
-  return (
-    <DisplayContainer>
-      <div>SleepTracker</div>
-    </DisplayContainer>
-  );
+  return <DisplayContainer></DisplayContainer>;
 };
 
 export default SleepTracker;

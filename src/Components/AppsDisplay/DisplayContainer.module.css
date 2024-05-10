@@ -2,7 +2,7 @@
   /* background-color: rgba(240, 248, 255, 0.785); */
   /* background-color: #e3e6e6; */
   background-color: #e7eef6;
-
+  position: relative;
   padding: 20px;
   width: 100%;
   height: fit-content;
@@ -23,6 +23,15 @@
   border-radius: 15px;
   box-shadow: 3px 3px 0px 0px #138899;
 }
+.icon_design {
+  position: absolute;
+  top: -120px;
+  right: 0px;
+  font-size: 150px;
+  color: rgba(255, 255, 255, 0.125);
+  filter: drop-shadow(0px 0px 20px white);
+  rotate: 20deg;
+}
 .icon {
   display: grid;
   place-items: center;
@@ -42,7 +51,53 @@
   font-family: "Lilita One", sans-serif;
   color: white;
 }
-
+.working {
+  width: 400px;
+  margin: 100px auto;
+  padding: 12px 10px;
+  border-radius: 40px;
+  background-color: white;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.working img {
+  width: 100%;
+  border-radius: 30px;
+}
+.working h2 {
+  margin-top: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fab440;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: -20px;
+  text-align: center;
+}
+.working p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  margin: 10px 30px;
+}
+.rotate {
+  animation: rotate 5s infinite linear;
+  font-size: 100px;
+  top: -10px;
+  right: -20px;
+  position: absolute;
+  color: #138899;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @media screen and (max-width: 800px) {
   .app_center {
     width: 100%;
@@ -53,7 +108,18 @@
     top: -15px;
     z-index: 0;
   }
+  .working {
+    width: 300px;
+    margin-top: 0px;
+  }
+  .working h2 {
+    font-size: 18px;
+  }
   .container {
     padding: 5px 0px;
+  }
+  .icon_design {
+    top: -100px;
+    color: rgba(255, 255, 255, 0.067);
   }
 }

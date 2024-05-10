@@ -2,11 +2,7 @@ import React from "react";
 import DisplayContainer from "../../DisplayContainer";
 
 const TriangleSolver = () => {
-  return (
-    <DisplayContainer>
-      <div>TriangleSolver</div>
-    </DisplayContainer>
-  );
+  return <DisplayContainer></DisplayContainer>;
 };
 
 export default TriangleSolver;

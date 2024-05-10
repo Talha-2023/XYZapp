@@ -225,7 +225,7 @@ input[type="number"]:focus::placeholder {
   margin-top: -20px;
   margin-bottom: 20px;
 }
-img {
+.result img {
   border-radius: 20px;
   border: 3px dashed black;
   margin-top: 10px;
