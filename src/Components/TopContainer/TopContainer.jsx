@@ -28,9 +28,9 @@ const TopContainer = () => {
         <TopText
           text="Web Apps By Talha"
           text2=" Talha"
-          characters="080808080800000"
-          speed={120}
-          revealDuration={4000}
+          characters="█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░"
+          speed={100}
+          revealDuration={3000}
         />
       </div>
       <motion.div

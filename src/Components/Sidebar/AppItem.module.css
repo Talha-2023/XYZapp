@@ -6,12 +6,11 @@
   color: black;
   transition: 0.1s ease-out;
   background-color: #ffffff;
-  width: 85%;
+  width: 165px;
   cursor: pointer;
   padding: 8px 10px;
   gap: 15px;
   box-shadow: inset -4px -5px 20px 0px #84848485;
-
   &:hover {
     text-shadow: 0px 0px 1px #000000;
     border-radius: 10px;
@@ -27,8 +26,9 @@
   font-family: "Metrophobic", sans-serif;
   font-weight: 600;
 }
-.app_icon {
-  font-size: 30px;
+
+.app_logo {
+  width: 40px;
 }
 .active {
   display: flex;

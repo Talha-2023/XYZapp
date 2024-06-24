@@ -1,134 +1,3 @@
-import React, { lazy } from "react";
-
-// import { BsUsbMini } from "react-icons/bs";
-// import { AiOutlineFire } from "react-icons/ai";
-// import { CiGlass } from "react-icons/ci";
-// import { FaPerson } from "react-icons/fa6";
-// import { SlSpeedometer } from "react-icons/sl";
-// import { IoFastFoodOutline } from "react-icons/io5";
-// import { PiPersonSimpleRunFill } from "react-icons/pi";
-// import { MdOutlineKingBed } from "react-icons/md";
-// import { LiaWeightSolid } from "react-icons/lia";
-// import { FaCashRegister } from "react-icons/fa6";
-// import { BsCalculator } from "react-icons/bs";
-// import { PiHandCoinsBold } from "react-icons/pi";
-// import { BsCashCoin } from "react-icons/bs";
-// import { LiaWalletSolid } from "react-icons/lia";
-// import { RiListCheck3 } from "react-icons/ri";
-// import { PiCoinVerticalDuotone } from "react-icons/pi";
-// import { TiArrowRepeat } from "react-icons/ti";
-// import { FaGraduationCap } from "react-icons/fa";
-// import { TbAlphabetGreek } from "react-icons/tb";
-// import { AiOutlineSchedule } from "react-icons/ai";
-// import { TbChartAreaLine } from "react-icons/tb";
-// import { TbVectorTriangle } from "react-icons/tb";
-// import { RiRectangleLine } from "react-icons/ri";
-// import { LuSheet } from "react-icons/lu";
-// import { RiCalendarTodoLine } from "react-icons/ri"; RiCalendarTodoLine = lazy(() => import("react-icons/ri").then(module => ({ default: module.RiCalendarTodoLine })));
-
-const AiOutlineFire = lazy(() =>
-  import("react-icons/ai").then((module) => ({ default: module.AiOutlineFire }))
-);
-const CiGlass = lazy(() =>
-  import("react-icons/ci").then((module) => ({ default: module.CiGlass }))
-);
-const FaPerson = lazy(() =>
-  import("react-icons/fa6").then((module) => ({ default: module.FaPerson }))
-);
-const SlSpeedometer = lazy(() =>
-  import("react-icons/sl").then((module) => ({ default: module.SlSpeedometer }))
-);
-const IoFastFoodOutline = lazy(() =>
-  import("react-icons/io5").then((module) => ({
-    default: module.IoFastFoodOutline,
-  }))
-);
-const PiPersonSimpleRunFill = lazy(() =>
-  import("react-icons/pi").then((module) => ({
-    default: module.PiPersonSimpleRunFill,
-  }))
-);
-const MdOutlineKingBed = lazy(() =>
-  import("react-icons/md").then((module) => ({
-    default: module.MdOutlineKingBed,
-  }))
-);
-const LiaWeightSolid = lazy(() =>
-  import("react-icons/lia").then((module) => ({
-    default: module.LiaWeightSolid,
-  }))
-);
-const FaCashRegister = lazy(() =>
-  import("react-icons/fa6").then((module) => ({
-    default: module.FaCashRegister,
-  }))
-);
-const BsCalculator = lazy(() =>
-  import("react-icons/bs").then((module) => ({ default: module.BsCalculator }))
-);
-const PiHandCoinsBold = lazy(() =>
-  import("react-icons/pi").then((module) => ({
-    default: module.PiHandCoinsBold,
-  }))
-);
-const BsCashCoin = lazy(() =>
-  import("react-icons/bs").then((module) => ({ default: module.BsCashCoin }))
-);
-const LiaWalletSolid = lazy(() =>
-  import("react-icons/lia").then((module) => ({
-    default: module.LiaWalletSolid,
-  }))
-);
-const RiListCheck3 = lazy(() =>
-  import("react-icons/ri").then((module) => ({ default: module.RiListCheck3 }))
-);
-const PiCoinVerticalDuotone = lazy(() =>
-  import("react-icons/pi").then((module) => ({
-    default: module.PiCoinVerticalDuotone,
-  }))
-);
-const TiArrowRepeat = lazy(() =>
-  import("react-icons/ti").then((module) => ({ default: module.TiArrowRepeat }))
-);
-const FaGraduationCap = lazy(() =>
-  import("react-icons/fa").then((module) => ({
-    default: module.FaGraduationCap,
-  }))
-);
-const TbAlphabetGreek = lazy(() =>
-  import("react-icons/tb").then((module) => ({
-    default: module.TbAlphabetGreek,
-  }))
-);
-const AiOutlineSchedule = lazy(() =>
-  import("react-icons/ai").then((module) => ({
-    default: module.AiOutlineSchedule,
-  }))
-);
-const TbChartAreaLine = lazy(() =>
-  import("react-icons/tb").then((module) => ({
-    default: module.TbChartAreaLine,
-  }))
-);
-const TbVectorTriangle = lazy(() =>
-  import("react-icons/tb").then((module) => ({
-    default: module.TbVectorTriangle,
-  }))
-);
-const RiRectangleLine = lazy(() =>
-  import("react-icons/ri").then((module) => ({
-    default: module.RiRectangleLine,
-  }))
-);
-const LuSheet = lazy(() =>
-  import("react-icons/lu").then((module) => ({ default: module.LuSheet }))
-);
-const RiCalendarTodoLine = lazy(() =>
-  import("react-icons/ri").then((module) => ({
-    default: module.RiCalendarTodoLine,
-  }))
-);
-
 const Data = [
   {
     heading: "Body and Fitness",
@@ -137,36 +6,37 @@ const Data = [
     audio: "BodyAndFitness",
     apps: [
       {
-        icon: <SlSpeedometer />,
         app_name: "BMI Calculator",
+        app_logo: "BmiLogo.svg",
+        name: "hi",
       },
       {
-        icon: <AiOutlineFire />,
         app_name: "Caloric Burn Calculator ",
+        app_logo: "CaloricBurnCalculatorLogo.svg",
       },
       {
-        icon: <IoFastFoodOutline />,
         app_name: "Nutritional Value Calculator  ",
+        app_logo: "NutritionalValueCalculatorLogo.svg",
       },
       {
-        icon: <FaPerson />,
         app_name: "Body Fat Percentage   ",
+        app_logo: "BodyFatPercentageLogo.svg",
       },
       {
-        icon: <CiGlass />,
         app_name: "Check Your Water Intake",
+        app_logo: "CheckYourWaterIntakeLogo.svg",
       },
       {
-        icon: <PiPersonSimpleRunFill />,
         app_name: "Running Route Planner",
+        app_logo: "RunningRoutePlannerLogo.svg",
       },
       {
-        icon: <MdOutlineKingBed />,
         app_name: "Sleep Tracker",
+        app_logo: "SleepTrackerLogo.svg",
       },
       {
-        icon: <LiaWeightSolid />,
         app_name: "Ideal Weight Calculator",
+        app_logo: "IdealWeightCalculatorLogo.svg",
       },
     ],
   },
@@ -177,36 +47,36 @@ const Data = [
     audio: "Financial",
     apps: [
       {
-        icon: <FaCashRegister />,
         app_name: "Mortgage Calculator",
+        app_logo: "MortgageCalculatorLogo.svg",
       },
       {
-        icon: <BsCalculator />,
         app_name: "Interest Calculator",
+        app_logo: "InterestCalculatorLogo.svg",
       },
       {
-        icon: <PiHandCoinsBold />,
         app_name: "Loan Repayment Calculator",
+        app_logo: "LoanRepaymentCalculatorLogo.svg",
       },
       {
-        icon: <BsCashCoin />,
         app_name: "Expense Tracker",
+        app_logo: "ExpenseTrackerLogo.svg",
       },
       {
-        icon: <LiaWalletSolid />,
         app_name: "Savings Goal Tracker",
+        app_logo: "SavingsGoalTrackerLogo.svg",
       },
       {
-        icon: <RiListCheck3 />,
         app_name: "EMI Calculator",
+        app_logo: "EMICalculatorLogo.svg",
       },
       {
-        icon: <PiCoinVerticalDuotone />,
         app_name: "Tip Calculator",
+        app_logo: "TipCalculatorLogo.svg",
       },
       {
-        icon: <TiArrowRepeat />,
         app_name: "Currency Converter",
+        app_logo: "CurrencyConverterLogo.svg",
       },
     ],
   },
@@ -217,36 +87,36 @@ const Data = [
     audio: "Education",
     apps: [
       {
-        icon: <FaGraduationCap />,
         app_name: "GPA Calculator ",
+        app_logo: "GPACalculatorLogo.svg",
       },
       {
-        icon: <TbAlphabetGreek />,
         app_name: "Grade Converter   ",
+        app_logo: "GradeConverterLogo.svg",
       },
       {
-        icon: <AiOutlineSchedule />,
         app_name: "Kawaii Habit Tracker ",
+        app_logo: "KawaiiHabitTrackerLogo.svg",
       },
       {
-        icon: <TbChartAreaLine />,
         app_name: "Area And Perimeter Calculator  ",
+        app_logo: "AreaAndPerimeterCalculatorLogo.svg",
       },
       {
-        icon: <TbVectorTriangle />,
         app_name: "Triangle Solver    ",
+        app_logo: "TriangleSolverLogo.svg",
       },
       {
-        icon: <RiRectangleLine />,
         app_name: "Rectangle Area Calculator ",
+        app_logo: "RectangleAreaCalculatorLogo.svg",
       },
       {
-        icon: <LuSheet />,
         app_name: "Attendance Calculator ",
+        app_logo: "AttendanceCalculatorLogo.svg",
       },
       {
-        icon: <RiCalendarTodoLine />,
         app_name: "Todo ",
+        app_logo: "TodoLogo.svg",
       },
     ],
   },

@@ -6,8 +6,7 @@ import { MdOutlineSpaceDashboard } from "react-icons/md";
 const PhoneSidebar = lazy(() => import("../Sidebar/PhoneSidebar/PhoneSidebar"));
 
 const Path = () => {
-  const app = useSelector((state) => state.AppName.value);
-  const appName = app.app_name;
+  const appName = useSelector((state) => state.AppName.value);
 
   return (
     <div className={styles.PathContainer}>

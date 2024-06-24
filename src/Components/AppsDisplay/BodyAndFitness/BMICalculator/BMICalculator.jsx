@@ -154,19 +154,18 @@ const BMICalculator = () => {
           is that it doesn't account for the distribution of body fat or
           distinguish between fat mass and muscle mass. This means that
           individuals with high muscle mass, such as athletes, may have a high
-          BMI despite being healthy and fit.
-          <p>BMI = weight (kg) / (height (m) * height (m))</p>
-          <img src="/bmi.jpeg" alt="" style={{ width: "100%" }} />
-          Additionally, BMI doesn't consider other important factors like age,
-          sex, or ethnicity, which can influence body composition and health
-          risks. Despite these limitations, BMI remains widely used in
-          healthcare settings and public health initiatives as a quick and
-          accessible way to assess weight status and identify potential health
-          risks associated with excess body weight. However, it's important to
-          interpret BMI alongside other health indicators and consider
-          individual circumstances for a comprehensive understanding of an
-          individual's health status.
+          BMI despite being healthy and fit. Additionally, BMI doesn't consider
+          other important factors like age, sex, or ethnicity, which can
+          influence body composition and health risks. Despite these
+          limitations, BMI remains widely used in healthcare settings and public
+          health initiatives as a quick and accessible way to assess weight
+          status and identify potential health risks associated with excess body
+          weight. However, it's important to interpret BMI alongside other
+          health indicators and consider individual circumstances for a
+          comprehensive understanding of an individual's health status.
         </p>
+        <p>BMI = weight (kg) / (height (m) * height (m))</p>
+        <img src="/bmi.jpeg" alt="" style={{ width: "100%" }} />
       </div>
     </DisplayContainer>
   );
